@@ -1,0 +1,52 @@
+using UnityEngine;
+
+public class Enemy : MonoBehaviour
+{
+    [SerializeField]
+    private float speed;
+
+    [SerializeField]
+    private int health;
+
+    public enum enemyType { Stationary, Honing, Magnetic };//Different types of enemies with different health and speed
+
+    [SerializeField]
+    private enemyType EnemyType;
+
+    private GameObject player;
+
+    void Start()//Sets the health and speed of the enemy based on its type
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    // Update is called once per frame
+    void Update()//Spawns enemies and moves them down the screen
+    {
+        transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+
+        if(transform.position.y <= -10f)
+        {
+            Destroy(gameObject);
+        }
+
+        if(EnemyType == enemyType.Honing && player != null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * 2 * Time.deltaTime);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)//Destroys the enemy when it collides with a bullet
+    {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            Debug.Log("Enemy hit by " + other.gameObject.tag);
+            health--;
+
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+}
