@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()//Spawns enemies and moves them down the screen
     {
-        transform.Translate(Vector3.down * speed * Time.deltaTime, Space.Self);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
 
         if(transform.position.y <= -10f)
         {
