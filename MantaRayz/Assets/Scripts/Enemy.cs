@@ -8,6 +8,17 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private int health;
 
+    public enum enemyType { Stationary, Honing, Magnetic };//Different types of enemies with different health and speed
+
+    [SerializeField]
+    private enemyType EnemyType;
+
+    private GameObject player;
+
+    void Start()//Sets the health and speed of the enemy based on its type
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     // Update is called once per frame
     void Update()//Spawns enemies and moves them down the screen
@@ -17,6 +28,11 @@ public class Enemy : MonoBehaviour
         if(transform.position.y <= -10f)
         {
             Destroy(gameObject);
+        }
+
+        if(EnemyType == enemyType.Honing && player != null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
     }
 
