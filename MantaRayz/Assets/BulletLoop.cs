@@ -67,4 +67,23 @@ public class BulletLoop : MonoBehaviour
             }
         }
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        // REPLACE TAG LATER WITH ACTIAL ENEMY OBJECT NAME!!!!
+        if (other.CompareTag("Enemy"))
+        {
+            // Try to find the EnemyHealth script on that object
+            EnemyHealth enemy = other.GetComponent<EnemyHealth>();
+            
+            if (enemy != null)
+            {
+                // Deal 1 damage to the enemy: 1 hit
+                enemy.TakeDamage(1);
+                
+                // Reset the bullet back to the ship immediately so it can fire again
+                ResetBullet();
+            }
+        }
+    }
 }

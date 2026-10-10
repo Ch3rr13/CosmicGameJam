@@ -21,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/BulletSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stats/Health.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -32,19 +33,19 @@
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
       <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.000000000025788" />
-      <entry key="S30" value="1.000541179892719" />
-      <entry key="S60" value="1.0440895595661916" />
-      <entry key="M2" value="1.4618153973458738" />
-      <entry key="M5" value="3.7303139856675105" />
-      <entry key="M10" value="6.714304990910412" />
-      <entry key="M15" value="8.448716614190538" />
-      <entry key="M30" value="10.798058032188907" />
-      <entry key="H1" value="12.274257317978835" />
-      <entry key="H2" value="13.10331031296404" />
-      <entry key="H4" value="13.542847544622328" />
-      <entry key="D1" value="13.922553446998005" />
-      <entry key="W1" value="13.988905069425032" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0000000000021896" />
+      <entry key="M30" value="1.0000054971043768" />
+      <entry key="H1" value="1.008757686338849" />
+      <entry key="H2" value="1.3500081101448196" />
+      <entry key="H4" value="3.2133929906127054" />
+      <entry key="D1" value="11.294619925742653" />
+      <entry key="W1" value="14.398430454376635" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -66,52 +67,52 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0625" />
-      <entry key="MS500" value="0.5743491774985174" />
-      <entry key="S2" value="0.8705505632961241" />
-      <entry key="S5" value="0.9460576467255959" />
-      <entry key="S10" value="0.9726549474353443" />
-      <entry key="S30" value="0.9913259114866193" />
-      <entry key="S60" value="1.0388541007617667" />
-      <entry key="M2" value="1.4564505718810175" />
-      <entry key="M5" value="3.7236296204498895" />
-      <entry key="M10" value="6.708548086431642" />
-      <entry key="M15" value="8.444015495864715" />
-      <entry key="M30" value="10.79514614109137" />
-      <entry key="H1" value="12.272629882894284" />
-      <entry key="H2" value="13.102449085120975" />
-      <entry key="H4" value="13.542404419430536" />
-      <entry key="D1" value="13.922477798621928" />
-      <entry key="W1" value="13.98889421781934" />
+      <entry key="MS100" value="0.1312145854528834" />
+      <entry key="MS500" value="0.6661874125460109" />
+      <entry key="S2" value="0.9034395641939208" />
+      <entry key="S5" value="0.9601954468427211" />
+      <entry key="S10" value="0.9798956305866054" />
+      <entry key="S30" value="0.9932531255878161" />
+      <entry key="S60" value="0.9966208534783004" />
+      <entry key="M2" value="0.9983089969935663" />
+      <entry key="M5" value="0.9993232553486797" />
+      <entry key="M10" value="0.9996615704070452" />
+      <entry key="M15" value="0.9997743675455719" />
+      <entry key="M30" value="0.9998926730292066" />
+      <entry key="H1" value="1.0087001122758246" />
+      <entry key="H2" value="1.3499568986789914" />
+      <entry key="H4" value="3.213306464347506" />
+      <entry key="D1" value="11.294561639190244" />
+      <entry key="W1" value="14.398419725019082" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3KU7hgPPMG9KcmAjaLSWkL3MvgV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "ProjectileHealth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ProjectileHealth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.6.4f1/Unity.app/Contents/MacOS/Unity" />
