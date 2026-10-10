@@ -10,6 +10,6 @@ public class ScrollingBackground : MonoBehaviour
     void Update()
     {
         float offset = Time.time * scrollSpeed;
-        backgroundRenderer.material.mainTextureOffset = new Vector2(offset, 0);
+        backgroundRenderer.material.mainTextureOffset = new Vector2(0, offset);
     }
 }
