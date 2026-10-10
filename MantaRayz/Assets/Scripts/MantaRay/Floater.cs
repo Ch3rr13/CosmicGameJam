@@ -22,7 +22,7 @@ public class FloaterOrbit : MonoBehaviour
         angle += speed * Time.deltaTime;
         float rad = angle * Mathf.Deg2Rad;
 
-        Vector3 offset = new Vector3(Mathf.Cos(rad), 0f, Mathf.Sin(rad)) * radius;
+        Vector3 offset = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0f) * radius;
         transform.position = target.position + offset + Vector3.up * heightOffset;
     }
 }
