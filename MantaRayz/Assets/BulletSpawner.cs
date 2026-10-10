@@ -14,6 +14,9 @@ public class BulletSpawner : MonoBehaviour
 
     private void SpawnBulletPool()
     {
+        if (bulletPrefab == null)
+        {
+            Debug.LogError("Bullet Prefab is not assigned to the spawner!");
             return;
         }
 
