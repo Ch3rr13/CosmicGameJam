@@ -22,6 +22,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/BulletSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stats/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.assistant@1b11b9bfd84a/Modules/Unity.AI.Toolkit.Accounts/Services/States/ApiAccessibleState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96f8d63efb624ec38a97de0dc4a4387a21c200/21/cb35b26d/Component.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
