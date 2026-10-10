@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6729900916433851223}
   - component: {fileID: 4048259792262767035}
   - component: {fileID: 7641262433091786383}
+  - component: {fileID: 3953589141425586229}
   m_Layer: 0
   m_Name: Floater
-  m_TagString: Untagged
+  m_TagString: Floater
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,3 +130,17 @@ MonoBehaviour:
   radius: 3
   speed: 120
   heightOffset: 0
+--- !u!114 &3953589141425586229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369969309977871622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a854780059a41d847ad013bfb36ef891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloaterShooter
+  bulletPrefab: {fileID: 626530051774852521, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
+  fireDelay: 0

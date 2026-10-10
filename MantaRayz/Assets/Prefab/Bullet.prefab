@@ -128,11 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a68c5295dd864a6eb821ed38d1ac546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 20
+  speed: 35
   topBoundary: 15
   fireDelay: 0
   shipOrigin: {fileID: 0}
-  shipTag: Player
 --- !u!54 &1847544632247288733
 Rigidbody:
   m_ObjectHideFlags: 0
