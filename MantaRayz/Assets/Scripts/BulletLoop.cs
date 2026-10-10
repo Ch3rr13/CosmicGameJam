@@ -1,60 +1,82 @@
+
 using UnityEngine;
 
 public class BulletLoop : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float speed = 15f;
-    public float topBoundary = 60f; 
-    public float fireDelay = 0f;
+    public float topBoundary = 60f;
+    public float fireDelay = 1f;
 
     [Header("References")]
     public Transform shipOrigin;
-    public string shipTag = "Player";
 
     private float currentDelay;
-    private Vector3 startPosition;
-    
-    // 1. Add this variable to control visibility
-    private MeshRenderer bulletMesh; 
+    private MeshRenderer bulletMesh;
 
-    void Start()
+    private void Awake()
     {
-        startPosition = transform.position; 
-        transform.up = Vector3.up;
-        
-        // 2. Grab the mesh component when the bullet is created
         bulletMesh = GetComponent<MeshRenderer>();
-        
-        FindShip();
-        ResetBullet();
-        transform.localScale = new Vector3(0.4f, 0.6f, 0.4f);
     }
 
-    void Update()
+    private void Start()
     {
-        if (currentDelay > 0)
+        transform.up = Vector3.up;
+        transform.localScale = new Vector3(0.4f, 0.6f, 0.4f);
+
+        if (shipOrigin == null)
         {
-            // Keep the bullet invisible while it waits
-            if (bulletMesh != null) bulletMesh.enabled = false;
-            
-            // Keep snapping the bullet to the moving Floater while waiting
-            if (shipOrigin != null)
-            {
-                transform.position = shipOrigin.position;
-            }
-            
+            Debug.LogError(
+                "Bullet has no shipOrigin assigned!", this
+            );
+            return;
+        }
+
+        ResetBullet();
+    }
+
+    public void Initialize()
+    {
+        if (shipOrigin == null)
+        {
+            Debug.LogError(
+                "Cannot initialize bullet: shipOrigin is missing!", this
+            );
+            return;
+        }
+
+        ResetBullet();
+    }
+
+    private void Update()
+    {
+        if (shipOrigin == null)
+        {
+            if (bulletMesh != null)
+                bulletMesh.enabled = false;
+
+            return;
+        }
+
+        if (currentDelay > 0f)
+        {
+            if (bulletMesh != null)
+                bulletMesh.enabled = false;
+
+            transform.position = shipOrigin.position;
             currentDelay -= Time.deltaTime;
             return;
         }
 
-        // Make the bullet visible the exact frame it starts moving
-        if (bulletMesh != null) bulletMesh.enabled = true;
+        if (bulletMesh != null)
+            bulletMesh.enabled = true;
 
-        // Move along the World Y-axis
-        transform.Translate(Vector3.up * speed * Time.deltaTime, Space.World);
+        transform.Translate(
+            Vector3.up * speed * Time.deltaTime,
+            Space.World
+        );
 
-        // Check the Y boundary
-        if (transform.position.y > topBoundary)
+        if (transform.position.y >= topBoundary)
         {
             ResetBullet();
         }
@@ -62,28 +84,26 @@ public class BulletLoop : MonoBehaviour
 
     private void ResetBullet()
     {
-        FindShip();
+        if (shipOrigin == null)
+            return;
 
-        if (shipOrigin != null)
-        {
-            transform.position = shipOrigin.position;
-        }
-        else
-        {
-            transform.position = startPosition;
-        }
-        
+        transform.position = shipOrigin.position;
         currentDelay = fireDelay;
+
+        if (bulletMesh != null)
+            bulletMesh.enabled = currentDelay <= 0f;
     }
 
-    private void FindShip()
+    private void OnTriggerEnter(Collider other)
     {
-        if (shipOrigin == null)
+        if (other.CompareTag("Enemy"))
         {
-            GameObject ship = GameObject.FindGameObjectWithTag("Floater");
-            if (ship != null)
+            EnemyHealth enemy = other.GetComponent<EnemyHealth>();
+
+            if (enemy != null)
             {
-                shipOrigin = ship.transform;
+                enemy.TakeDamage(1);
+                ResetBullet();
             }
         }
     }
