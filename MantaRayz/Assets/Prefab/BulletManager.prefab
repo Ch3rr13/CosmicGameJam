@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletSpawner
   bulletPrefab: {fileID: 626530051774852521, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
   numberOfBullets: 20
-  staggerTime: 0.15
+  staggerTime: 0.5
