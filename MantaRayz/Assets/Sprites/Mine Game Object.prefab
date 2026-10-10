@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   speed: 2
+  health: 1
 --- !u!135 &-8118613197975447892
 SphereCollider:
   m_ObjectHideFlags: 0

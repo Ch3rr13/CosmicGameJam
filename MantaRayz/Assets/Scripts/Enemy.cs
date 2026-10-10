@@ -4,7 +4,11 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField]
     private float speed;
-    
+
+    [SerializeField]
+    private int health;
+
+
     // Update is called once per frame
     void Update()//Spawns enemies and moves them down the screen
     {
@@ -20,8 +24,12 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("Enemy hit by:" + other.gameObject.name);
-            Destroy(gameObject);
+            health--;
+
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
