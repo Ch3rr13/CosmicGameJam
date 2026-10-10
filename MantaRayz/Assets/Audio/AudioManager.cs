@@ -81,7 +81,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Look up the configured music for this scene.
-        // Crossfade to that track if necessary.
+        // Look up the configured music for scene
+        // Crossfade to music
     }
 }
