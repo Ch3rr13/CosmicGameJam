@@ -70,6 +70,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -1473434350824360405, guid: 19d09e07649f85747b0292b18bb21a39, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8828601397926202964}
+    - targetCorrespondingSourceObject: {fileID: -1473434350824360405, guid: 19d09e07649f85747b0292b18bb21a39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8118613197975447892}
+    - targetCorrespondingSourceObject: {fileID: -1473434350824360405, guid: 19d09e07649f85747b0292b18bb21a39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7562061911055935725}
   m_SourcePrefab: {fileID: -5076157951724874089, guid: 19d09e07649f85747b0292b18bb21a39, type: 3}
 --- !u!1 &707766489822079552 stripped
 GameObject:
@@ -107,6 +113,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   speed: 2
+--- !u!135 &-8118613197975447892
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707766489822079552}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.37
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-7562061911055935725
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707766489822079552}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1931097945495054758 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -534923654136564275, guid: 19d09e07649f85747b0292b18bb21a39, type: 3}
