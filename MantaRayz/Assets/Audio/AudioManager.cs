@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private AudioBank audioBank;
     [SerializeField] private AudioMixerGroup sfxGroup;
+    [SerializeField] private AudioSource musicSourceA;
+    [SerializeField] private AudioSource musicSourceB;
 
     private void Awake()
     {
