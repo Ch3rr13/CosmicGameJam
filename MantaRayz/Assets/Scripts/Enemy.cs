@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
 
         if(EnemyType == enemyType.Honing && player != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * 2 * Time.deltaTime);
         }
     }
 
