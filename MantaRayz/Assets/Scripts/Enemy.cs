@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
+            Debug.Log("Enemy hit by " + other.gameObject.tag);
             health--;
 
             if (health <= 0)
