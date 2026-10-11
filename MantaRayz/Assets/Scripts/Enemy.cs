@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)//Destroys the enemy when it collides with a bullet
     {
-        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("Enemy hit by " + other.gameObject.tag);
             health--;
@@ -56,6 +56,10 @@ public class Enemy : MonoBehaviour
             {
                 Destroy(gameObject, 0.01f);//Deletes instance of the enemy after less than a second
             }
+        } else if (other.gameObject.CompareTag("Floater"))
+        {
+            Debug.Log("Enemy hit by " + other.gameObject.tag);
+            //Ideally floater would be assigned health and it would decrease
         }
     }
 }

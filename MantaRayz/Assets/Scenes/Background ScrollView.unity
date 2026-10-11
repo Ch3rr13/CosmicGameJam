@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn Manager Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3983012449356215615, guid: fdc4ccc07dcfe214b9cdde4767295fc3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5229691889812134218, guid: fdc4ccc07dcfe214b9cdde4767295fc3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.19664
@@ -174,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 5998302868693466104, guid: fdc4ccc07dcfe214b9cdde4767295fc3, type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 1503056788346833576, guid: 60d4970258028d64bb1be4c496a4fd13, type: 3}
+      objectReference: {fileID: 7901202024840438636, guid: 8356da9c3ffa7bc45b2a75d3b08dfd6c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -248,6 +252,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3887100410325746444, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887100410325746444, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
+      propertyPath: floaterPrefab
+      value: 
+      objectReference: {fileID: 4299110958810214306, guid: d289beb64e18ead4e9e2679d9fb2e3fe, type: 3}
     - target: {fileID: 4051988301097650493, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -287,6 +299,10 @@ PrefabInstance:
     - target: {fileID: 5556547454367485511, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556547454367485511, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5943064451847353283, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
       propertyPath: m_Mesh
@@ -797,6 +813,10 @@ PrefabInstance:
     - target: {fileID: 5087865740883207113, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
       propertyPath: m_Radius
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087865740883207113, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7209407768057522202, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
       propertyPath: speed
