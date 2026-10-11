@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdd43efa8bf774f01848adfb9c9340ca, type: 3}
-  m_Name: AudioBank
+  m_Name: SFXBank
   m_EditorClassIdentifier: Assembly-CSharp::AudioBank
   entries:
   - eventKey: playerTakeDamage
