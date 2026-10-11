@@ -1,4 +1,3 @@
-
 using System;
 using UnityEngine;
 
@@ -8,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     private bool isGameOver = false;
     public event Action gameOver;
+
     private void Start()
     {
         Time.timeScale = 1f;
@@ -16,13 +16,14 @@ public class GameManager : MonoBehaviour
             youDiedImage.SetActive(false);
     }
 
-
     public void GameOver()
     {
         if (isGameOver) return;
 
         isGameOver = true;
         Debug.Log("GAME OVER");
+
+        Time.timeScale = 0f;        // stop the game first, even if the image is missing
         gameOver?.Invoke();
 
         if (youDiedImage == null)
@@ -32,9 +33,5 @@ public class GameManager : MonoBehaviour
         }
 
         youDiedImage.SetActive(true);
-        Debug.Log("You Died Image activated: " + youDiedImage.activeSelf);
-
-        Time.timeScale = 0f;
     }
-
 }
