@@ -54,6 +54,8 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("Enemy hit by " + other.gameObject.tag);
             health--;
+            ScoreManager.addScore(10);
+            Debug.Log("Current score" + ScoreManager.getScore());
 
             enemyTakeDamage?.Invoke();
 
