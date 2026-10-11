@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5210827060798492964, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5256624043058226627, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -824,6 +828,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 50723384979118967, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 626530051774852521, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
       propertyPath: m_Name
       value: Bullet
@@ -842,15 +850,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2867832508422875335, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.000000007448299
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2867832508422875335, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0000000072661672
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2867832508422875335, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.15
       objectReference: {fileID: 0}
     - target: {fileID: 2867832508422875335, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -882,7 +890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4251364595434773990, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
       propertyPath: speed
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5087865740883207113, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
       propertyPath: m_Height
