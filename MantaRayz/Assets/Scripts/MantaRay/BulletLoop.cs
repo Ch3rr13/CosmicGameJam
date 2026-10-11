@@ -10,6 +10,9 @@ public class BulletLoop : MonoBehaviour
 
     private void Start()
     {
+        gameObject.tag = "Bullet";
+        
+        Vector3 alignedPosition = transform.position;
         transform.up = Vector3.up;  // point straight up
         start = transform.position;
     }
