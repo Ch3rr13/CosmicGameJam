@@ -16,7 +16,7 @@ public class GameOverSceneManager : MonoBehaviour
         {
             initGame?.Invoke();
             
-            //SceneManager.LoadScene("Title Screen Scene"); 
+            SceneManager.LoadScene("Game Scene"); 
         }
     }
 }

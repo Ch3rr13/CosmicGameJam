@@ -69,21 +69,22 @@ public class AudioTrigger : MonoBehaviour
             Vector3 ppos = GameObject.Find("MantaRay w_ Swim + Sprite").GetComponent<Transform>().position;
             Vector3 rel = pos - ppos;
             if (AudioManager.Instance != null)
-        {
-            AudioManager.Instance.PlaySound(
-                key,
-                rel,
-                soundOverride
-            );
-        }
+            {
+                AudioManager.Instance.PlaySound(
+                    key,
+                    rel,
+                    soundOverride
+                );
+            }
 
-        if (AudioManager.Instance != null)
-        {
-            AudioManager.Instance.PlaySound(
-                key,
-                pos,
-                soundOverride
-            );
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySound(
+                    key,
+                    pos,
+                    soundOverride
+                );
+            }
         }
     }
 }
