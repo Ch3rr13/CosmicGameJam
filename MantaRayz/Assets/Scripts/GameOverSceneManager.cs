@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System;
 
 public class GameOverSceneManager : MonoBehaviour
 {
+    public event Action initGame;
     void Update()
     {
         // Checks for keyboard presses or a left mouse click
@@ -12,7 +14,9 @@ public class GameOverSceneManager : MonoBehaviour
 
         if (anyKeyPressed)
         {
-            SceneManager.LoadScene("Title Screen Scene"); 
+            initGame?.Invoke();
+            
+            //SceneManager.LoadScene("Title Screen Scene"); 
         }
     }
 }

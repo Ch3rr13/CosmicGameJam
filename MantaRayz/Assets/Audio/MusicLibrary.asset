@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574dca31571e64888b42d868d6498ca9, type: 3}
+  m_Name: MusicLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::MusicLibrary
+  entries:
+  - sceneName: Title Screen Scene
+    track: {fileID: 8300000, guid: 32ada07bab50d4788b1a038f535e20c6, type: 3}
+    fadeSeconds: 2
+  - sceneName: Background ScrollView
+    track: {fileID: 8300000, guid: b5d73766cf40e46899f7ba923c14a2d1, type: 3}
+    fadeSeconds: 2
+  - sceneName: Background ScrollView
+    track: {fileID: 8300000, guid: a5f63e604edf148c88dbf7bf5434bd04, type: 3}
+    fadeSeconds: 2

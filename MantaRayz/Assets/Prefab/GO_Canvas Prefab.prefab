@@ -238,6 +238,8 @@ GameObject:
   - component: {fileID: 5652435669366371748}
   - component: {fileID: 8448457380896032798}
   - component: {fileID: 2667084786853858090}
+  - component: {fileID: 6570943245027976583}
+  - component: {fileID: -1404086087801036669}
   - component: {fileID: 1792507834403617370}
   - component: {fileID: 7538396088314976751}
   - component: {fileID: 5074665410235207280}
@@ -306,6 +308,36 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &6570943245027976583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499293125735384027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3e64e4a06d34aa2a1f185e4402e143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameTrigger
+  source: {fileID: 8448457380896032798}
+  eventName: gameOver
+--- !u!114 &-1404086087801036669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499293125735384027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a0e85cf3aa5483a92b84c15d595314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
+  source: {fileID: 8448457380896032798}
+  eventName: initGame
+  eventKeyOverride: 
+  soundOverride: {fileID: 0}
 --- !u!114 &1792507834403617370
 MonoBehaviour:
   m_ObjectHideFlags: 0
