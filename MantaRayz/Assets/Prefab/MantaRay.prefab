@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7586238557382942585}
   - component: {fileID: 6342978174563073931}
   - component: {fileID: 4912916857036842353}
+  - component: {fileID: 3419698528169605218}
   m_Layer: 0
   m_Name: MantaRay
   m_TagString: Untagged
@@ -128,3 +129,26 @@ MonoBehaviour:
   speed: 10
   limitX: 8
   limitZ: 6
+--- !u!114 &3419698528169605218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4638701253726997421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a773c22ce61c0a24a8d4b96c86f694dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloaterRing
+  floaterPrefab: {fileID: 6369969309977871622, guid: b644ad246a81df045bd180ec6051f0e2, type: 3}
+  bulletPrefab: {fileID: 626530051774852521, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
+  startingFloaters: 1
+  maxFloaters: 3
+  collectableTag: Sphere
+  radius: 3
+  speed: 120
+  heightOffset: 0
+  slideSpeed: 180
+  bulletsPerFloater: 4
+  bulletSpacing: 0.2
