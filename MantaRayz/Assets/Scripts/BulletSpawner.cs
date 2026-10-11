@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BulletSpawner : MonoBehaviour
@@ -10,6 +11,7 @@ public class BulletSpawner : MonoBehaviour
     [Tooltip("How many bullets shoot per second")]
     public float fireRate = 5f; 
 
+    public event Action playerShoot;
     void Start()
     {
         SpawnBulletPool();
@@ -30,7 +32,7 @@ public class BulletSpawner : MonoBehaviour
         for (int i = 0; i < numberOfBullets; i++)
         {
             GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            
+            playerShoot?.Invoke();
             BulletLoop loopScript = newBullet.GetComponent<BulletLoop>();
             
             if (loopScript != null)

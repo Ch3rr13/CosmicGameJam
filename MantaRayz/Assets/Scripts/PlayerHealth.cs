@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameManager gameManager;
 
     private float currentHealth;
+    public event Action playerTakeDamage;
 
     private void Start()
     {
@@ -37,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
     private void TakeDamage(float amount)
     {
         if (currentHealth <= 0f) return;
-
+        playerTakeDamage?.Invoke();
         currentHealth = Mathf.Max(0f, currentHealth - amount);
 
         Debug.Log("Current health: " + currentHealth);
