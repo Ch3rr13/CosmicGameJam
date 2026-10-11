@@ -9,7 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5611250821393418675}
-  - component: {fileID: 215838631898997228}
+  - component: {fileID: 1568215586160476893}
+  - component: {fileID: 4201997458942983986}
+  - component: {fileID: 5386751452213514842}
+  - component: {fileID: 4783552013224353154}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -32,7 +35,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &215838631898997228
+--- !u!114 &1568215586160476893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,3 +48,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   youDiedImage: {fileID: 0}
+--- !u!114 &4201997458942983986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7814738638569482075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a0e85cf3aa5483a92b84c15d595314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
+  source: {fileID: 1568215586160476893}
+  eventName: gameOver
+  eventKeyOverride: 
+  soundOverride: {fileID: 0}
+--- !u!114 &5386751452213514842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7814738638569482075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a0e85cf3aa5483a92b84c15d595314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
+  source: {fileID: 1568215586160476893}
+  eventName: gameStart
+  eventKeyOverride: 
+  soundOverride: {fileID: 0}
+--- !u!114 &4783552013224353154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7814738638569482075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a0e85cf3aa5483a92b84c15d595314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
+  source: {fileID: 1568215586160476893}
+  eventName: gameInit
+  eventKeyOverride: 
+  soundOverride: {fileID: 0}

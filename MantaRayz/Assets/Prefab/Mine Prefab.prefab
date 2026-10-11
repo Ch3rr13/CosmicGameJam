@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3031270334284274674}
   - component: {fileID: 910415839250247091}
   - component: {fileID: -8137710187733755088}
+  - component: {fileID: -8215516116658537926}
   m_Layer: 0
   m_Name: Mine Prefab
   m_TagString: Enemy
@@ -101,6 +102,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 10
   m_CollisionDetection: 0
+--- !u!114 &-8215516116658537926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7901202024840438636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a0e85cf3aa5483a92b84c15d595314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
+  source: {fileID: 3031270334284274674}
+  eventName: enemyTakeDamage
+  eventKeyOverride: 
+  soundOverride: {fileID: 0}
 --- !u!1001 &4571408661767997305
 PrefabInstance:
   m_ObjectHideFlags: 0

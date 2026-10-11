@@ -59,9 +59,10 @@ public class AudioTrigger : MonoBehaviour
     private void OnEventTriggered()
     {
         string key = string.IsNullOrEmpty(eventKeyOverride)
-            ? $"{source.GetType().Name}.{eventName}"
+            ? $"{eventName}"
             : eventKeyOverride;
 
+        Debug.Log($"Triggered: {source.GetType().Name}.{eventName}");
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.PlaySound(
