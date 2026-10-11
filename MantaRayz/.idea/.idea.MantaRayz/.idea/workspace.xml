@@ -30,61 +30,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000034859903344" />
-      <entry key="MS500" value="1.0811946506115968" />
-      <entry key="S2" value="1.6998658917087037" />
-      <entry key="S5" value="2.61187288422428" />
-      <entry key="S10" value="3.420486912566703" />
-      <entry key="S30" value="4.3440785608061665" />
-      <entry key="S60" value="4.651860249714324" />
-      <entry key="M2" value="4.820523010859407" />
-      <entry key="M5" value="4.939050026810195" />
-      <entry key="M10" value="5.200144481121656" />
-      <entry key="M15" value="5.751463141865278" />
-      <entry key="M30" value="8.066241428275083" />
-      <entry key="H1" value="11.703990047257049" />
-      <entry key="H2" value="15.31142103135941" />
-      <entry key="H4" value="18.943177290026647" />
-      <entry key="D1" value="29.713574784437423" />
-      <entry key="W1" value="34.121283129275355" />
+      <entry key="MS100" value="0.00296807161271436" />
+      <entry key="MS500" value="0.5286094733088209" />
+      <entry key="S2" value="2.1230705386421858" />
+      <entry key="S5" value="3.0468361532551156" />
+      <entry key="S10" value="3.4785312094537733" />
+      <entry key="S30" value="3.8148305727501115" />
+      <entry key="S60" value="3.9091491483817737" />
+      <entry key="M2" value="4.017051248471157" />
+      <entry key="M5" value="4.984226527531491" />
+      <entry key="M10" value="8.097348744631127" />
+      <entry key="M15" value="11.064446811864006" />
+      <entry key="M30" value="17.398016107104056" />
+      <entry key="H1" value="24.546116621601854" />
+      <entry key="H2" value="31.127001372826047" />
+      <entry key="H4" value="36.83777298157399" />
+      <entry key="D1" value="49.97271362341359" />
+      <entry key="W1" value="55.00276691152433" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.3312074928788904E-55" />
-      <entry key="MS500" value="1.2720973178662427E-11" />
-      <entry key="S2" value="0.001888556943883257" />
-      <entry key="S5" value="0.08136769880390089" />
-      <entry key="S10" value="0.28525023891997164" />
-      <entry key="S30" value="0.6582769864242146" />
-      <entry key="S60" value="0.8113427059043634" />
-      <entry key="M2" value="0.9007456407152298" />
-      <entry key="M5" value="0.9593715920980578" />
-      <entry key="M10" value="0.9972670720206533" />
-      <entry key="M15" value="1.0547312374215108" />
-      <entry key="M30" value="1.2549183568630318" />
-      <entry key="H1" value="1.5082471201768266" />
-      <entry key="H2" value="1.713609203303445" />
-      <entry key="H4" value="1.8449128730739561" />
-      <entry key="D1" value="1.972325566740329" />
-      <entry key="W1" value="1.9959993020176126" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000069809485264" />
+      <entry key="S60" value="1.0037523032608775" />
+      <entry key="M2" value="1.094535679847557" />
+      <entry key="M5" value="2.0375379781701763" />
+      <entry key="M10" value="4.113650466170364" />
+      <entry key="M15" value="5.745147551834029" />
+      <entry key="M30" value="8.523803514909895" />
+      <entry key="H1" value="10.721215423924642" />
+      <entry key="H2" value="12.177567138355071" />
+      <entry key="H4" value="13.034334173983872" />
+      <entry key="D1" value="13.830571148594586" />
+      <entry key="W1" value="13.975574546105275" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.4040949259866012E-5" />
-      <entry key="MS500" value="0.10816716312495331" />
-      <entry key="S2" value="0.8740466077168914" />
-      <entry key="S5" value="2.0468284559972303" />
-      <entry key="S10" value="3.2275858514131146" />
-      <entry key="S30" value="4.777905630491098" />
-      <entry key="S60" value="5.339525750266787" />
-      <entry key="M2" value="5.656234536607187" />
-      <entry key="M5" value="5.87153299708627" />
-      <entry key="M10" value="6.183307505277677" />
-      <entry key="M15" value="6.79600700872633" />
-      <entry key="M30" value="9.314611570230532" />
-      <entry key="H1" value="13.207923272417561" />
-      <entry key="H2" value="17.022399163200973" />
-      <entry key="H4" value="20.78657850564797" />
-      <entry key="D1" value="31.685577321554245" />
-      <entry key="W1" value="36.117232535669146" />
+      <entry key="MS100" value="0.036329451223628094" />
+      <entry key="MS500" value="0.9956585053512418" />
+      <entry key="S2" value="2.779511206813118" />
+      <entry key="S5" value="3.7895931927421036" />
+      <entry key="S10" value="4.311121159510897" />
+      <entry key="S30" value="4.747396801142276" />
+      <entry key="S60" value="4.8773523160762275" />
+      <entry key="M2" value="5.091850362434149" />
+      <entry key="M5" value="7.007015075729516" />
+      <entry key="M10" value="12.194659454424231" />
+      <entry key="M15" value="16.793321053306833" />
+      <entry key="M30" value="25.908274487356717" />
+      <entry key="H1" value="35.25782612054167" />
+      <entry key="H2" value="43.29868937181568" />
+      <entry key="H4" value="49.868756319212814" />
+      <entry key="D1" value="63.80261796751104" />
+      <entry key="W1" value="68.97824130962506" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -106,7 +106,7 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ProjectileHealth&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;TitleScreen&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
