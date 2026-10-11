@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a773c22ce61c0a24a8d4b96c86f694dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloaterRing
-  floaterPrefab: {fileID: 6369969309977871622, guid: b644ad246a81df045bd180ec6051f0e2, type: 3}
+  floaterPrefab: {fileID: 4364977992772668367, guid: 27089efb79401694eb5158aea61fc3a4, type: 3}
   bulletPrefab: {fileID: 626530051774852521, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
   maxFloaters: 3
   collectableTag: Sphere
