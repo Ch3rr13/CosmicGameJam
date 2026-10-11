@@ -174,7 +174,7 @@ PrefabInstance:
     - target: {fileID: 5998302868693466104, guid: fdc4ccc07dcfe214b9cdde4767295fc3, type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 7901202024840438636, guid: 8356da9c3ffa7bc45b2a75d3b08dfd6c, type: 3}
+      objectReference: {fileID: 1503056788346833576, guid: 60d4970258028d64bb1be4c496a4fd13, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -283,6 +283,10 @@ PrefabInstance:
     - target: {fileID: 5556547454367485511, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
       propertyPath: m_Name
       value: MantaRay w_ Swim + Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556547454367485511, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5943064451847353283, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
       propertyPath: m_Mesh
