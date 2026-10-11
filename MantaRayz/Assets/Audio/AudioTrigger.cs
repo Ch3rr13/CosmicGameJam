@@ -63,11 +63,25 @@ public class AudioTrigger : MonoBehaviour
             : eventKeyOverride;
 
         Debug.Log($"Triggered: {source.GetType().Name}.{eventName}");
+        Vector3 pos = gameObject.GetComponentInParent<Transform>().position;
+        if (GameObject.Find("MantaRay w_ Swim + Sprite") != null)
+        {
+            Vector3 ppos = GameObject.Find("MantaRay w_ Swim + Sprite").GetComponent<Transform>().position;
+            Vector3 rel = pos - ppos;
+            if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySound(
+                key,
+                rel,
+                soundOverride
+            );
+        }
+
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.PlaySound(
                 key,
-                transform.position,
+                pos,
                 soundOverride
             );
         }

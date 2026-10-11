@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
 
     public event Action enemyTakeDamage;
     public event Action enemyDeath;
+    
 
     void Start()//Sets the health and speed of the enemy based on its type
     {
@@ -37,7 +38,7 @@ public class Enemy : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
 
-        if (transform.position.z <= -10f)
+        if (transform.position.y <= -10f)
         {
             Destroy(gameObject);
         }
