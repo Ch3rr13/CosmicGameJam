@@ -32,12 +32,12 @@ public class Enemy : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
 
-        if(transform.position.z <= -10f)
+        if (transform.position.z <= -10f)
         {
             Destroy(gameObject);
         }
 
-        if(EnemyType == enemyType.Honing && player != null)
+        if (EnemyType == enemyType.Honing && player != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * 2 * Time.deltaTime);
         }
@@ -49,17 +49,25 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("Enemy hit by " + other.gameObject.tag);
             health--;
-            
+
             //enemyTakeDamage?.Invoke();
 
             if (health <= 0)
             {
                 Destroy(gameObject, 0.01f);//Deletes instance of the enemy after less than a second
             }
-        } else if (other.gameObject.CompareTag("Floater"))
+
+        }
+        else if (other.gameObject.CompareTag("Floater"))
         {
             Debug.Log("Enemy hit by " + other.gameObject.tag);
             //Ideally floater would be assigned health and it would decrease
+        }
+        else if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Enemy hit by " + other.gameObject.tag);
+
+            Destroy(gameObject, 0.01f);//Enemy immediately dies when it collides with the player, but the player takes damage
         }
     }
 }
