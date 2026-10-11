@@ -116,6 +116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swordfish w_ Swim + Sprite
       objectReference: {fileID: 0}
+    - target: {fileID: -611085590042060563, guid: 87236af0d56114e4daccda282b6bb7a5, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -495496465260113089, guid: 87236af0d56114e4daccda282b6bb7a5, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -242,6 +246,8 @@ MonoBehaviour:
   health: 5
   EnemyType: 1
   Damage: 10
+  difficultyScale: 0.1
+  minSpawnRate: 0.5
 --- !u!114 &6215761818057950784 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3827427168284972037, guid: 87236af0d56114e4daccda282b6bb7a5, type: 3}

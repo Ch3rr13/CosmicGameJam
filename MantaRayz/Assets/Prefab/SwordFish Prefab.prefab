@@ -138,3 +138,5 @@ MonoBehaviour:
   speed: 2
   health: 5
   EnemyType: 1
+  Damage: 10
+  difficultyScale: 0.05

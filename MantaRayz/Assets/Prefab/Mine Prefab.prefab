@@ -51,6 +51,8 @@ MonoBehaviour:
   health: 1
   EnemyType: 0
   Damage: 5
+  difficultyScale: 0.1
+  minSpawnRate: 0.15
 --- !u!135 &910415839250247091
 SphereCollider:
   m_ObjectHideFlags: 0

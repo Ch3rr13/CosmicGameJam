@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453e14a6871ba134db98e08c36ba9d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  enemyPrefab: {fileID: 707766489822079552, guid: b5e989cde9ff5fc4ebf4cc33d53ea18d, type: 3}
+  enemyPrefab: {fileID: 7901202024840438636, guid: 8356da9c3ffa7bc45b2a75d3b08dfd6c, type: 3}
