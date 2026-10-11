@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicLibrary
   entries:
   - sceneName: Title Screen Scene
-    track: {fileID: 8300000, guid: 32ada07bab50d4788b1a038f535e20c6, type: 3}
-    fadeSeconds: 2
+    tracks:
+    - {fileID: 8300000, guid: 32ada07bab50d4788b1a038f535e20c6, type: 3}
+    playbackMode: 0
+    fadeSeconds: 4
   - sceneName: Background ScrollView
-    track: {fileID: 8300000, guid: b5d73766cf40e46899f7ba923c14a2d1, type: 3}
-    fadeSeconds: 2
-  - sceneName: Background ScrollView
-    track: {fileID: 8300000, guid: a5f63e604edf148c88dbf7bf5434bd04, type: 3}
-    fadeSeconds: 2
+    tracks:
+    - {fileID: 8300000, guid: b5d73766cf40e46899f7ba923c14a2d1, type: 3}
+    - {fileID: 8300000, guid: a5f63e604edf148c88dbf7bf5434bd04, type: 3}
+    playbackMode: 1
+    fadeSeconds: 4

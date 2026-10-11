@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioCue
   clips:
   - {fileID: 8300000, guid: 8cf8523c52fee4aae8765cdaa278268f, type: 3}
-  volume: 0.602
+  volume: 0.256
   minPitch: 0.95
   maxPitch: 1.05
   spatialBlend: 1

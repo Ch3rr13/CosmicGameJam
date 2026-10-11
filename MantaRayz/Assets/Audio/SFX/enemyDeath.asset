@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5fcc6e4da5114c15b639da31e27406f, type: 3}
-  m_Name: gameOver
+  m_Name: enemyDeath
   m_EditorClassIdentifier: Assembly-CSharp::AudioCue
   clips:
-  - {fileID: 8300000, guid: bfb30e7b5c2a248e9810a9d1076e7320, type: 3}
+  - {fileID: 8300000, guid: 8321cae3317af450eb20e55f94abb05b, type: 3}
   volume: 1
   minPitch: 0.95
   maxPitch: 1.05

@@ -554,6 +554,7 @@ GameObject:
   - component: {fileID: 1320655826}
   - component: {fileID: 1320655825}
   - component: {fileID: 1320655828}
+  - component: {fileID: 1320655829}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -679,6 +680,30 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!167 &1320655829
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320655824}
+  m_Enabled: 1
+  m_MinDistance: 10
+  m_MaxDistance: 15
+  m_ReverbPreset: 23
+  m_Room: -1000
+  m_RoomHF: -4000
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.1
+  m_Reflections: -449
+  m_ReflectionsDelay: 0.007
+  m_Reverb: 1700
+  m_ReverbDelay: 0.011
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!1 &1487969759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,11 +1089,11 @@ PrefabInstance:
       objectReference: {fileID: -2484970637278192751, guid: 2e45da545102e40a4bf4857a72a5d241, type: 2}
     - target: {fileID: 8385203401460129486, guid: 5d95e1a317a444d48bd018ca755d266d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.73014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8385203401460129486, guid: 5d95e1a317a444d48bd018ca755d266d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79852
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8385203401460129486, guid: 5d95e1a317a444d48bd018ca755d266d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1100,6 +1125,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8385203401460129486, guid: 5d95e1a317a444d48bd018ca755d266d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723100947252302873, guid: 5d95e1a317a444d48bd018ca755d266d, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -194,12 +194,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40d12525976fd464f8cd8dd774bcf1dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3400017068302813548}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40d12525976fd464f8cd8dd774bcf1dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1231745198635595355}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40d12525976fd464f8cd8dd774bcf1dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2315647606554629262}
   m_SourcePrefab: {fileID: 100100000, guid: 40d12525976fd464f8cd8dd774bcf1dc, type: 3}
 --- !u!1 &681250466574048669 stripped
 GameObject:
@@ -242,40 +236,3 @@ MonoBehaviour:
   speed: 10
   limitX: 8
   limitZ: 6
---- !u!114 &1231745198635595355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681250466574048669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a773c22ce61c0a24a8d4b96c86f694dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FloaterRing
-  floaterPrefab: {fileID: 4364977992772668367, guid: 27089efb79401694eb5158aea61fc3a4, type: 3}
-  bulletPrefab: {fileID: 626530051774852521, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
-  maxFloaters: 3
-  collectableTag: Sphere
-  radius: 3
-  orbitSpeed: 90
-  bulletsPerBurst: 3
-  timeBetweenBullets: 0.1
-  timeBetweenBursts: 0.5
---- !u!114 &2315647606554629262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681250466574048669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a0e85cf3aa5483a92b84c15d595314, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
-  source: {fileID: 1231745198635595355}
-  eventName: playerShoot
-  eventKeyOverride: 
-  soundOverride: {fileID: 0}
