@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     private GameObject player;
 
     public event Action enemyTakeDamage;
+    public event Action enemyDeath;
 
     void Start()//Sets the health and speed of the enemy based on its type
     {
@@ -58,6 +59,7 @@ public class Enemy : MonoBehaviour
 
             if (health <= 0)
             {
+                enemyDeath?.Invoke();
                 Destroy(gameObject, 0.01f);//Deletes instance of the enemy after less than a second
             }
 

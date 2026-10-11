@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
   source: {fileID: 8448457380896032798}
-  eventName: gameOver
+  eventName: initGame
   eventKeyOverride: 
   soundOverride: {fileID: 0}
 --- !u!114 &1792507834403617370
