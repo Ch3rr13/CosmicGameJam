@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private enemyType EnemyType;
 
+    [SerializeField]
+    public int Damage;
+
     private GameObject player;
 
     void Start()//Sets the health and speed of the enemy based on its type
@@ -25,7 +28,7 @@ public class Enemy : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
 
-        if(transform.position.y <= -10f)
+        if(transform.position.z <= -10f)
         {
             Destroy(gameObject);
         }
@@ -38,7 +41,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)//Destroys the enemy when it collides with a bullet
     {
-        if (other.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Enemy hit by " + other.gameObject.tag);
             health--;

@@ -4,7 +4,7 @@ using UnityEngine;
 public class BulletLoop : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float speed = 15f;
+    public float speed = 35f;
     public float topBoundary = 60f;
     public float fireDelay = 1f;
 
@@ -92,19 +92,5 @@ public class BulletLoop : MonoBehaviour
 
         if (bulletMesh != null)
             bulletMesh.enabled = currentDelay <= 0f;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            EnemyHealth enemy = other.GetComponent<EnemyHealth>();
-
-            if (enemy != null)
-            {
-                enemy.TakeDamage(1);
-                ResetBullet();
-            }
-        }
     }
 }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8925906214145883594}
-  - component: {fileID: 8069691207926067895}
+  - component: {fileID: 2965649222570915560}
   m_Layer: 0
   m_Name: BulletManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8069691207926067895
+--- !u!114 &2965649222570915560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,9 +41,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6410871911422466511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ed3a5f955b744ba92408abc5876b4a, type: 3}
+  m_Script: {fileID: 11500000, guid: bbe32692423325049a1bd0fad0fc43bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletSpawner
-  bulletPrefab: {fileID: 626530051774852521, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
-  numberOfBullets: 20
-  staggerTime: 0.5
+  bulletPrefab: {fileID: 6364108406380555465, guid: c148920244751f14ab77568c2d688bfb, type: 3}
+  numberOfBullets: 40
+  fireRate: 5

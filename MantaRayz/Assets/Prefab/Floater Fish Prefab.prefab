@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
       propertyPath: m_Name
       value: Floater Fish Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
+      propertyPath: m_TagString
+      value: Floater
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -96,7 +100,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &8634966550057772339
 SphereCollider:
@@ -131,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a21b76493385e34e8833e02f39f37ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloaterOrbit
-  target: {fileID: 0}
+  target: {fileID: 6233482522083358921, guid: dd28321a72dd66e468f6c0802e9d4879, type: 3}
   radius: 3
   speed: 120
   heightOffset: 0
