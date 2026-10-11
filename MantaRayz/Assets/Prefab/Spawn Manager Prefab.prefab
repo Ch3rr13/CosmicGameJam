@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5229691889812134218}
   - component: {fileID: 5998302868693466104}
-  - component: {fileID: 6138976974752073784}
   m_Layer: 0
   m_Name: Spawn Manager Prefab
   m_TagString: Untagged
@@ -45,20 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453e14a6871ba134db98e08c36ba9d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  enemyPrefab: {fileID: 707766489822079552, guid: b5e989cde9ff5fc4ebf4cc33d53ea18d, type: 3}
---- !u!114 &6138976974752073784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3983012449356215615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a0e85cf3aa5483a92b84c15d595314, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
-  source: {fileID: 5998302868693466104}
-  eventName: enemySpawn
-  eventKeyOverride: 
-  soundOverride: {fileID: 0}
+  enemyPrefab: {fileID: 7901202024840438636, guid: 8356da9c3ffa7bc45b2a75d3b08dfd6c, type: 3}

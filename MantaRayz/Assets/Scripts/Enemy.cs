@@ -18,6 +18,10 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     public int Damage;
 
+    [SerializeField]
+    public float difficultyScale = 0.5f;//As time goes on the speed of enemies ebign spawned will increase by this amount in seconds
+    public float minSpawnRate = 0.5f;//As time goes on the speed of enemies ebign spawned will increase by this amount in seconds
+
     private GameObject player;
 
     public event Action enemyTakeDamage;
