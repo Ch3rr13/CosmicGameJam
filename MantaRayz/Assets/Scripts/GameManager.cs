@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
 
         youDiedImage.SetActive(true);
         Debug.Log("You Died Image activated: " + youDiedImage.activeSelf);*/
-        SceneManager.LoadScene(gameOverScene.name);
+        SceneManager.LoadScene("Game Over Scene");
         SceneManager.SetActiveScene(gameOverScene);
         SceneManager.UnloadSceneAsync(levelScene);        
 

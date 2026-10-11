@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
-    [SerializeField] private float hitDamage = 10f;
+    private float hitDamage = 0f;
 
     [Header("Leave empty: found automatically in the scene")]
     [SerializeField] private HealthBar healthBar;
@@ -43,13 +43,19 @@ public class PlayerHealth : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (HurtsPlayer(collision.gameObject))
+        {
+            hitDamage = collision.gameObject.GetComponent<Enemy>().Damage;
             TakeDamage(hitDamage);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (HurtsPlayer(other.gameObject))
+        {
+            hitDamage = other.gameObject.GetComponent<Enemy>().Damage;
             TakeDamage(hitDamage);
+        }
     }
 
     // Only objects with one of the damage tags hurt the player.
