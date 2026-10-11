@@ -6,26 +6,38 @@ public class ScoreManager : MonoBehaviour
     public static int currentScore = 0;
 
     // GETTER: Returns the current score (used by your Game Over screen)
-    public int getScore()
+    public static int getScore()
     {
         return currentScore;
     }
 
     // SETTER: Overwrites the score with a specific number
-    public void setScore(int newScore)
+    public static void setScore(int newScore)
     {
         currentScore = newScore;
     }
 
     // HELPER: Adds points to the existing score (best for defeating enemies)
-    public void addScore(int pointsToAdd)
+// HELPER: Adds points to the existing score (best for defeating enemies)
+    public static void addScore(int pointsToAdd)
     {
         currentScore += pointsToAdd;
+
+        // Add ".Instance." to target the active UI object
+        if (ScoreOverlay.Instance != null)
+        {
+            ScoreOverlay.Instance.UpdateScoreDisplay(currentScore);
+        }
     }
 
     // HELPER: Resets the score to zero when restarting the game
-    public void resetScore()
+    public static void resetScore()
     {
         currentScore = 0;
+
+        if (ScoreOverlay.Instance != null)
+        {
+            ScoreOverlay.Instance.UpdateScoreDisplay(currentScore);
+        }
     }
 }
