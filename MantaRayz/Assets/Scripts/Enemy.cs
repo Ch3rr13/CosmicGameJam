@@ -1,3 +1,5 @@
+using System;
+using Unity.AppUI.Redux.DevTools;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -17,6 +19,7 @@ public class Enemy : MonoBehaviour
     public int Damage;
 
     private GameObject player;
+    public event Action enemyTakeDamage;
 
     void Start()//Sets the health and speed of the enemy based on its type
     {
@@ -45,7 +48,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("Enemy hit by " + other.gameObject.tag);
             health--;
-
+            enemyTakeDamage?.Invoke();
             if (health <= 0)
             {
                 Destroy(gameObject);

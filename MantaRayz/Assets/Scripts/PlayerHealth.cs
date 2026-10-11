@@ -1,14 +1,16 @@
 
+using System;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private float hitDamage = 20f;
     [SerializeField] private GameManager gameManager;
 
     private float currentHealth;
-    private float enemyDamage;
+    public event Action playerTakeDamage;
 
     private void Start()
     {
@@ -20,34 +22,24 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Collision with: " + collision.gameObject.name);
 
-        GameObject gameObject = collision.gameObject;
-
-        if (collision.rigidbody != null && (collision.gameObject.CompareTag("Enemy") /*|| collision.gameObject.CompareTag("Obstacle")*/))//If we fo created obstacles
-        {
-            Enemy enemy = gameObject.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                enemyDamage = enemy.Damage;
-            }
-
-            TakeDamage(enemyDamage);
-        }
+        if (collision.rigidbody != null)
+            TakeDamage(hitDamage);
     }
 
-    /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger with: " + other.name);
 
         if (other.attachedRigidbody != null)
             TakeDamage(hitDamage);
-    }*/
+    }
 
 
 
     private void TakeDamage(float amount)
     {
         if (currentHealth <= 0f) return;
-
+        playerTakeDamage?.Invoke();
         currentHealth = Mathf.Max(0f, currentHealth - amount);
 
         Debug.Log("Current health: " + currentHealth);

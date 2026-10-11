@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -6,7 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject youDiedImage;
 
     private bool isGameOver = false;
-
+    public event Action gameOver;
     private void Start()
     {
         Time.timeScale = 1f;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
 
         isGameOver = true;
         Debug.Log("GAME OVER");
+        gameOver?.Invoke();
 
         if (youDiedImage == null)
         {
