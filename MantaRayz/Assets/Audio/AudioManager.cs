@@ -7,12 +7,12 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance { get; private set; }
 
     [SerializeField] private AudioBank audioSFXBank;
-    [SerializeField] private AudioBank audioMusicBank;
 
     [SerializeField] private AudioMixerGroup sfxGroup;
     [SerializeField] private AudioMixerGroup musicGroup;
     [SerializeField] private AudioSource musicSourceA;
     [SerializeField] private AudioSource musicSourceB;
+    [SerializeField] private MusicController musicController;
 
     private void Awake()
     {
@@ -82,6 +82,14 @@ public class AudioManager : MonoBehaviour
         source.Play();
 
         Destroy(emitter, clip.length / source.pitch + 0.1f);
+    }
+
+
+
+    public void PlayMusic(AudioClip clip, float fadeDuration = 2f)
+    {
+        if (musicController != null)
+            musicController.PlayMusic(clip, fadeDuration);
     }
     private void OnEnable()
     {   

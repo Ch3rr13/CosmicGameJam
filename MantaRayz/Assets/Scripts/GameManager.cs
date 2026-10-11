@@ -92,18 +92,19 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.SetActiveScene(mainMenu);
         SceneManager.UnloadSceneAsync(levelScene);
+        //AudioManager.Instance.PlayMusic(menuMusic, 2f);
         gameInit?.Invoke();
     }
     private void StartGame()
     {
-        Debug.Log("started gakme");
+        Debug.Log("started game");
         Time.timeScale = 1f;
         gameStart?.Invoke();
         if (youDiedImage != null)
             youDiedImage.SetActive(false);
         SceneManager.LoadScene(levelScene.name);
-        SceneManager.SetActiveScene(levelScene);
-        SceneManager.UnloadSceneAsync(mainMenu);
+        //SceneManager.SetActiveScene(levelScene);
+       //SceneManager.UnloadSceneAsync(mainMenu);
     }
     private void OnStartTriggered()
     {
