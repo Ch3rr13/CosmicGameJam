@@ -12,11 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9603debe-5a3b-4a7f-a734-0fe0cb795fc1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MantaRayz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MantaRayz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3Dassets/UI_assets/digitFolder/0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3Dassets/UI_assets/digitFolder/0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/UIScoreCanvas Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/UIScoreCanvas Prefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreOverlay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreOverlay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Background ScrollView.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Background ScrollView.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
