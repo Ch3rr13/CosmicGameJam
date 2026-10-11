@@ -1,3 +1,5 @@
+using System;
+using Unity.AppUI.Redux.DevTools;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -13,7 +15,12 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private enemyType EnemyType;
 
+    [SerializeField]
+    public int Damage;
+
     private GameObject player;
+
+    //public event Action enemyTakeDamage;
 
     void Start()//Sets the health and speed of the enemy based on its type
     {
@@ -23,14 +30,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()//Spawns enemies and moves them down the screen
     {
-        transform.Translate(Vector3.down * speed * Time.deltaTime, Space.Self);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
 
-        if(transform.position.y <= -10f)
+        if (transform.position.z <= -10f)
         {
             Destroy(gameObject);
         }
 
-        if(EnemyType == enemyType.Honing && player != null)
+        if (EnemyType == enemyType.Honing && player != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * 2 * Time.deltaTime);
         }
@@ -43,10 +50,24 @@ public class Enemy : MonoBehaviour
             Debug.Log("Enemy hit by " + other.gameObject.tag);
             health--;
 
+            //enemyTakeDamage?.Invoke();
+
             if (health <= 0)
             {
-                Destroy(gameObject);
+                Destroy(gameObject, 0.01f);//Deletes instance of the enemy after less than a second
             }
+
+        }
+        else if (other.gameObject.CompareTag("Floater"))
+        {
+            Debug.Log("Enemy hit by " + other.gameObject.tag);
+            //Ideally floater would be assigned health and it would decrease
+        }
+        else if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Enemy hit by " + other.gameObject.tag);
+
+            Destroy(gameObject, 0.01f);//Enemy immediately dies when it collides with the player, but the player takes damage
         }
     }
 }

@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Bullet
+  - FloaterOrbit
   - Floater
+  - Bullet
+  - Sphere
   layers:
   - Default
   - TransparentFX

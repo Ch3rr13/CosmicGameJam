@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd43efa8bf774f01848adfb9c9340ca, type: 3}
+  m_Name: AudioBank
+  m_EditorClassIdentifier: Assembly-CSharp::AudioBank
+  entries:
+  - eventKey: playerTakeDamage
+    cue: {fileID: 11400000, guid: c73ae18642cbf447f9a7c9ad4120acee, type: 2}
+  - eventKey: playerSpawn
+    cue: {fileID: 11400000, guid: 43a2d18c276e346d18fe22b18970543e, type: 2}
+  - eventKey: gameOver
+    cue: {fileID: 11400000, guid: 814ce12fa8ca347cea7f6a7150322e24, type: 2}
+  - eventKey: enemyTakeDamage
+    cue: {fileID: 11400000, guid: db6edcbed94ed41398df94db5fcb2763, type: 2}
+  - eventKey: enemySpawn
+    cue: {fileID: 11400000, guid: 9da4773109c484e3c94d138bcbbd2ee8, type: 2}
+  - eventKey: playerShoot
+    cue: {fileID: 11400000, guid: 274c65f44e85c4ec9a0ce9e657a37eef, type: 2}

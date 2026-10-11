@@ -1,7 +1,6 @@
 using Unity.AppUI.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem;
 public class MantaRayControl : MonoBehaviour
 {
     public float speed = 10f;

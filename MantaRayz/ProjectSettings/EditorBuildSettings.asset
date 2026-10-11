@@ -5,18 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+  - enabled: 1
+    path: Assets/Scenes/Bullet.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/Title Screen Scene.unity
-    guid: 8012184be4f1e4f038a11242cbc0ad53
-  - enabled: 1
-    path: Assets/Scenes/Background ScrollView.unity
-    guid: d499096415b40e449b65cac5f7a387eb
-  - enabled: 1
-    path: Assets/Scenes/Enemy Spawning Scene.unity
-    guid: d86a427af9791344bbf59cf6f077fb57
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
