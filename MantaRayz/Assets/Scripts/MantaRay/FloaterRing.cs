@@ -10,7 +10,7 @@ public class FloaterRing : MonoBehaviour
     public GameObject bulletPrefab;      // needs BulletLoop
 
     [Header("Floaters")]
-    public int maxFloaters = 3;
+    public int maxFloaters = 3;          // the most floaters the player can have (including the first one)
     public string collectableTag = "Sphere";
 
     [Header("Orbit")]
@@ -32,6 +32,13 @@ public class FloaterRing : MonoBehaviour
     }
 
     private readonly List<Floater> floaters = new List<Floater>();
+    private int lastCollectFrame = -1;
+
+    // The spawner reads this, so it only sends a fish when the player has room.
+    public int FloaterCount
+    {
+        get { return floaters.Count; }
+    }
 
     private void Start()
     {
@@ -45,13 +52,23 @@ public class FloaterRing : MonoBehaviour
         AddFloater();   // the one you start with
     }
 
-    // Picking up a collectable adds a floater.
+    // Catching a collectable adds one floater.
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag(collectableTag)) return;
         if (floaters.Count >= maxFloaters) return;
 
-        Destroy(other.gameObject);
+        // The player has several colliders, so one fish can trigger this several times in one frame.
+        // Count each catch only once.
+        if (Time.frameCount == lastCollectFrame) return;
+        lastCollectFrame = Time.frameCount;
+
+        // Remove the whole fish, even if the collider is on one of its child objects.
+        CollectibleFish fish = other.GetComponentInParent<CollectibleFish>();
+        GameObject caught = fish != null ? fish.gameObject : other.gameObject;
+        caught.SetActive(false);
+        Destroy(caught);
+
         AddFloater();
     }
 
@@ -69,6 +86,8 @@ public class FloaterRing : MonoBehaviour
             floaters[i].targetSlot = i * 360f / floaters.Count;
 
         f.slot = f.targetSlot;
+
+        Debug.Log("Floaters: " + floaters.Count + " / " + maxFloaters);
     }
 
     private void Update()
