@@ -10,7 +10,13 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9603debe-5a3b-4a7f-a734-0fe0cb795fc1" name="Changes" comment="" />
+    <list default="true" id="9603debe-5a3b-4a7f-a734-0fe0cb795fc1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MantaRayz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MantaRayz/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3Dassets/UI_assets/UI_splash_Screen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3Dassets/UI_assets/UI_splash_Screen.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Title Screen Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Title Screen Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreOverlay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreOverlay.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +112,7 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;TitleScreen&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
