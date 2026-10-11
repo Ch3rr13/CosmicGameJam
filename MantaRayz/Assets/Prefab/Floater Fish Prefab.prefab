@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -18,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
       propertyPath: m_Name
       value: Floater Fish Prefab
@@ -66,9 +82,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8634966550057772339}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7565558471399186684}
   m_SourcePrefab: {fileID: 100100000, guid: 5a42093280d2c764da35908513e2aeca, type: 3}
 --- !u!1 &4364977992772668367 stripped
 GameObject:
@@ -123,19 +136,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.28
   m_Center: {x: 0, y: 0.03, z: -0.12}
---- !u!114 &7565558471399186684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4364977992772668367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a21b76493385e34e8833e02f39f37ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FloaterOrbit
-  target: {fileID: 6233482522083358921, guid: dd28321a72dd66e468f6c0802e9d4879, type: 3}
-  radius: 3
-  speed: 120
-  heightOffset: 0

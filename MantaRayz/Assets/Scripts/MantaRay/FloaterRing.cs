@@ -58,7 +58,8 @@ public class FloaterRing : MonoBehaviour
     private void AddFloater()
     {
         Floater f = new Floater();
-        f.t = Instantiate(floaterPrefab, transform.position, Quaternion.identity).transform;
+        Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.back);//Makes sure floater looks up
+        f.t = Instantiate(floaterPrefab, transform.position, rotation).transform;
         f.shotsLeft = bulletsPerBurst;
         f.cooldown = floaters.Count * 0.2f;      // each floater starts a little later
         floaters.Add(f);
