@@ -6,8 +6,11 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    [SerializeField] private AudioBank audioBank;
+    [SerializeField] private AudioBank audioSFXBank;
+    [SerializeField] private AudioBank audioMusicBank;
+
     [SerializeField] private AudioMixerGroup sfxGroup;
+    [SerializeField] private AudioMixerGroup musicGroup;
     [SerializeField] private AudioSource musicSourceA;
     [SerializeField] private AudioSource musicSourceB;
 
@@ -30,14 +33,14 @@ public class AudioManager : MonoBehaviour
     {
         Debug.Log($"Playing cue: {eventKey}");
         AudioCue cue;
-        if (audioBank != null)
+        if (audioSFXBank != null)
         {
             if (soundOverride != null )
             {
                 cue = soundOverride;
             } else
             {
-                cue = audioBank.GetCue(eventKey);
+                cue = audioSFXBank.GetCue(eventKey);
             }
         } else
         {
@@ -92,6 +95,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        //
         // Look up the configured music for scene
         // Crossfade to music
     }

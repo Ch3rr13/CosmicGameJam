@@ -1,13 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System;
 
 public class TitleScreenManager : MonoBehaviour
 {
     [Header("Flicker Settings")]
     public GameObject pressToStartIMG; // Assign your image here in the Inspector
     public float flickerSpeed = 0.5f;  // How fast it blinks in seconds
+    private GameManager gameManager;
 
+    public event Action startGame;
     private float timer = 0f;
 
     void Update()
@@ -30,7 +33,10 @@ public class TitleScreenManager : MonoBehaviour
 
         if (anyKeyPressed)
         {
-            SceneManager.LoadScene("Background ScrollView"); 
+            startGame?.Invoke();
+
+
+            //SceneManager.LoadScene("Background ScrollView"); 
         }
     }
 }

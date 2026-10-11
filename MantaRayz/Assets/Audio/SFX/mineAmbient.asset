@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5fcc6e4da5114c15b639da31e27406f, type: 3}
   m_Name: mineAmbient
   m_EditorClassIdentifier: Assembly-CSharp::AudioCue
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: be70d7ce35f7b4b9dbd247616d1a7885, type: 3}
   volume: 1
   minPitch: 0.95
   maxPitch: 1.05

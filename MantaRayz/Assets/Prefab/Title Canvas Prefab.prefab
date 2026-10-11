@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 1501365883776134745}
   - component: {fileID: 1037572243035313133}
   - component: {fileID: 1540236595598462678}
+  - component: {fileID: -4361282215449939249}
   - component: {fileID: 5908297127528087174}
   - component: {fileID: 907713464780498285}
   - component: {fileID: 6966981507993441241}
@@ -370,6 +371,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &-4361282215449939249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448883244562295438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3e64e4a06d34aa2a1f185e4402e143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameTrigger
+  source: {fileID: 1037572243035313133}
+  eventName: startGame
 --- !u!114 &5908297127528087174
 MonoBehaviour:
   m_ObjectHideFlags: 0
