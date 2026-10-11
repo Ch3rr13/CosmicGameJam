@@ -28,11 +28,22 @@ public class AudioManager : MonoBehaviour
         Vector3 position,
         AudioCue soundOverride = null)
     {
-        AudioCue cue = soundOverride != null
-            ? soundOverride
-            : audioBank != null
-                ? audioBank.GetCue(eventKey)
-                : null;
+        Debug.Log($"Playing cue: {eventKey}");
+        AudioCue cue;
+        if (audioBank != null)
+        {
+            if (soundOverride != null )
+            {
+                cue = soundOverride;
+            } else
+            {
+                cue = audioBank.GetCue(eventKey);
+            }
+        } else
+        {
+            cue = null;
+            Debug.LogWarning("Missing audio bank.");
+        }
 
         if (cue == null)
         {

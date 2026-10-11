@@ -152,6 +152,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -611085590042060563, guid: 87236af0d56114e4daccda282b6bb7a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6468201474343919882}
+    - targetCorrespondingSourceObject: {fileID: -611085590042060563, guid: 87236af0d56114e4daccda282b6bb7a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1569810486203303104}
   m_SourcePrefab: {fileID: -7542956539969774068, guid: 87236af0d56114e4daccda282b6bb7a5, type: 3}
 --- !u!1 &1503056788346833576 stripped
 GameObject:
@@ -242,6 +245,22 @@ MonoBehaviour:
   health: 5
   EnemyType: 1
   Damage: 10
+--- !u!114 &1569810486203303104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503056788346833576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a0e85cf3aa5483a92b84c15d595314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
+  source: {fileID: 6468201474343919882}
+  eventName: enemyTakeDamage
+  eventKeyOverride: 
+  soundOverride: {fileID: 0}
 --- !u!114 &6215761818057950784 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3827427168284972037, guid: 87236af0d56114e4daccda282b6bb7a5, type: 3}
