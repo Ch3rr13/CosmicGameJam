@@ -1,11 +1,22 @@
 using System;
 using UnityEngine;
 
+public enum MusicPlaybackMode
+{
+    Sequential,
+    Random,
+    Single
+}
+
 [Serializable]
 public class SceneMusicEntry
 {
     public string sceneName;
-    public AudioClip track;
+
+    public AudioClip[] tracks;
+
+    public MusicPlaybackMode playbackMode =
+        MusicPlaybackMode.Sequential;
 
     [Min(0f)]
     public float fadeSeconds = 2f;
@@ -14,8 +25,7 @@ public class SceneMusicEntry
 [CreateAssetMenu(menuName = "Jam Audio/Music Library")]
 public class MusicLibrary : ScriptableObject
 {
-    [SerializeField]
-    private SceneMusicEntry[] entries;
+    [SerializeField] private SceneMusicEntry[] entries;
 
     public bool TryGet(string sceneName, out SceneMusicEntry result)
     {

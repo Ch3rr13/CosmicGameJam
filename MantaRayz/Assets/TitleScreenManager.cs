@@ -100,7 +100,7 @@ public class TitleScreenManager : MonoBehaviour
             startGame?.Invoke();
 
 
-            //SceneManager.LoadScene("Background ScrollView"); 
+            SceneManager.LoadScene("Game Scene"); 
         }
     }
 }

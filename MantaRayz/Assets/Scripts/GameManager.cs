@@ -1,34 +1,25 @@
-
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Reflection;
-using Unity.Collections.Tests.CoreCLR.TestJobs;
-
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject youDiedImage;
+    // Must match the scene FILE names exactly (and be in Build Settings).
+    public const string TitleScene = "Title Screen Scene";
+    public const string GameScene = "Game Scene";
+    public const string GameOverScene = "Game Over Scene";
 
-    private Scene mainMenu;
-    private Scene levelScene;
-    private Scene gameOverScene;
-    
-
-    private String mainMenuEvent;
     public static GameManager Instance { get; private set; }
 
+    public event Action gameInit;
+    public event Action gameStart;
+    public event Action gameOver;
 
     private bool isGameOver = false;
-    public event Action gameOver;
-    public event Action gameStart;
-    public event Action gameInit;
-
-    private EventInfo boundStartEvent;
-    private Action startListener;
 
     private void Awake()
     {
+        // Persistent singleton: extra copies (e.g. the one in Game_Scene) destroy themselves.
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -37,111 +28,52 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        mainMenu = SceneManager.GetSceneByName("Title Screen Scene");
-        gameOverScene = SceneManager.GetSceneByName("Game Over Scene");
-
-        levelScene = SceneManager.GetSceneByName("Background ScrollView");
-
-        
     }
-    public void GameEvent(string gameevent){
-        switch (gameevent){
-            case "initGame":
-                InitGame();
-                break;
-            case "startGame":
-                StartGame();
-                break;
-            case "gameOver":
-                GameOver();
-                break;
-        }
-    }
-    void OnEnable()
+
+    // Called by GameTrigger / other scripts with one of these keys.
+    public void GameEvent(string gameevent)
     {
-
-        Debug.Log("gamemanager enabled!");
-        if (mainMenu == null || string.IsNullOrEmpty(mainMenuEvent))
-            return;
-        
-        boundStartEvent = mainMenu.GetType().GetEvent(
-            mainMenuEvent,
-            BindingFlags.Public | BindingFlags.Instance
-        );
-
-        if (boundStartEvent == null ||
-            boundStartEvent.EventHandlerType != typeof(Action))
+        switch (gameevent)
         {
-            Debug.LogWarning(
-                $"GameManager: Invalid event {mainMenuEvent}",
-                this
-            );
-
-            boundStartEvent = null;
-            return;
+            case "initGame": InitGame(); break;
+            case "startGame": StartGame(); break;
+            case "gameOver": GameOver(); break;
+            default:
+                Debug.LogWarning($"GameManager: unknown game event '{gameevent}'");
+                break;
         }
-
-        startListener = OnStartTriggered;
-
-        boundStartEvent.AddEventHandler(mainMenu, startListener);
-
-        InitGame();
     }
 
+    // Go to the title screen.
     public void InitGame()
     {
-        SceneManager.SetActiveScene(mainMenu);
-        SceneManager.UnloadSceneAsync(levelScene);
-        //AudioManager.Instance.PlayMusic(menuMusic, 2f);
+        ResetState();
         gameInit?.Invoke();
+        SceneManager.LoadScene(TitleScene);
     }
-    private void StartGame()
+
+    // Start (or restart) a run.
+    public void StartGame()
     {
         Debug.Log("started game");
-        Time.timeScale = 1f;
+        ResetState();
         gameStart?.Invoke();
-        if (youDiedImage != null)
-            youDiedImage.SetActive(false);
-        SceneManager.LoadScene(levelScene.name);
-        //SceneManager.SetActiveScene(levelScene);
-       //SceneManager.UnloadSceneAsync(mainMenu);
+        SceneManager.LoadScene(GameScene);
     }
-    private void OnStartTriggered()
-    {
-        Time.timeScale = 1f;
-        gameStart?.Invoke();
-        if (youDiedImage != null)
-            youDiedImage.SetActive(false);
-        
-        SceneManager.SetActiveScene(levelScene);
-        SceneManager.UnloadSceneAsync(mainMenu);
-
-    }
-
-
-
 
     public void GameOver()
     {
-        if (isGameOver) return;
-
+        if (isGameOver) return;   // ignore duplicate deaths in the same run
         isGameOver = true;
+
         Debug.Log("GAME OVER");
         gameOver?.Invoke();
-
-        /*if (youDiedImage == null)
-        {
-            Debug.LogError("You Died Image is not assigned!");
-            return;
-        }
-
-        youDiedImage.SetActive(true);
-        Debug.Log("You Died Image activated: " + youDiedImage.activeSelf);*/
-        SceneManager.LoadScene(gameOverScene.name);
-        SceneManager.SetActiveScene(gameOverScene);
-        SceneManager.UnloadSceneAsync(levelScene);        
-
-        Time.timeScale = 0f;
+        SceneManager.LoadScene(GameOverScene);
     }
 
+    private void ResetState()
+    {
+        isGameOver = false;       // without this, only the first death ever works
+        Time.timeScale = 1f;      // never leave the game frozen between scenes
+    }
 }

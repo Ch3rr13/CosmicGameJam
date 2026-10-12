@@ -1,22 +1,29 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
-using System;
 
 public class GameOverSceneManager : MonoBehaviour
 {
-    public event Action initGame;
+    private bool leaving = false;
+
     void Update()
     {
-        // Checks for keyboard presses or a left mouse click
-        bool anyKeyPressed = (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame) || 
+        if (leaving) return;
+
+        // Any key or left mouse click
+        bool anyKeyPressed = (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame) ||
                              (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame);
 
-        if (anyKeyPressed)
+        if (!anyKeyPressed) return;
+        leaving = true;
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.GameEvent("initGame");   // back to Title; use "startGame" to retry instantly
+        else
         {
-            initGame?.Invoke();
-            
-            //SceneManager.LoadScene("Title Screen Scene"); 
+            // Opened this scene directly in the editor: no GameManager exists.
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(GameManager.TitleScene);
         }
     }
 }

@@ -61,10 +61,11 @@ public class AudioManager : MonoBehaviour
 
         GameObject emitter = new GameObject("SFX: " + eventKey);
 
+        
         emitter.transform.position = position;
 
         AudioSource source = emitter.AddComponent<AudioSource>();
-
+        source.spatialBlend = 0.0f;
         source.playOnAwake = false;
         source.clip = clip;
 

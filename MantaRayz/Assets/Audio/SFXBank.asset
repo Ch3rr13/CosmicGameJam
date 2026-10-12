@@ -18,10 +18,12 @@ MonoBehaviour:
   - eventKey: playerSpawn
     cue: {fileID: 11400000, guid: 43a2d18c276e346d18fe22b18970543e, type: 2}
   - eventKey: gameOver
-    cue: {fileID: 11400000, guid: 814ce12fa8ca347cea7f6a7150322e24, type: 2}
+    cue: {fileID: 11400000, guid: 3fee4eaa0246a463e91dcacc2f71e420, type: 2}
   - eventKey: enemyTakeDamage
     cue: {fileID: 11400000, guid: db6edcbed94ed41398df94db5fcb2763, type: 2}
   - eventKey: enemySpawn
-    cue: {fileID: 11400000, guid: 9da4773109c484e3c94d138bcbbd2ee8, type: 2}
+    cue: {fileID: 11400000, guid: 958a65240c48a4d0eb5a770658e00aed, type: 2}
   - eventKey: playerShoot
     cue: {fileID: 11400000, guid: 274c65f44e85c4ec9a0ce9e657a37eef, type: 2}
+  - eventKey: enemyDeath
+    cue: {fileID: 11400000, guid: 8367ab2d46f154dfda0542f954bfdc0c, type: 2}
