@@ -4,7 +4,7 @@ using UnityEngine;
 // To be catchable: tag it "Sphere" and give it a Collider with Is Trigger ticked.
 public class CollectibleFish : MonoBehaviour
 {
-    public float speed = 15f;
+    public float speed = 25f;
     public float bobHeight = 1f;        // how far it wobbles up and down while swimming
     public float bobSpeed = 2f;
     public float maxLifetime = 40f;     // safety: it is always removed after this many seconds

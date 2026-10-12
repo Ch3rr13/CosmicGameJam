@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         else
             Debug.LogWarning("PlayerHealth: no HealthBar found in the scene.");
     }
-
+    
     private void Update()
     {
         if (spaceTest && Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)

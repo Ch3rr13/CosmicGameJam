@@ -490,6 +490,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3887100410325746444, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
+      propertyPath: radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887100410325746444, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -1156,7 +1160,7 @@ MonoBehaviour:
   gameManager: {fileID: 677919654}
   damageTags:
   - Enemy
-  spaceTest: 0
+  spaceTest: 1
 --- !u!1 &1485639106
 GameObject:
   m_ObjectHideFlags: 0

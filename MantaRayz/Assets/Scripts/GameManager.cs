@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         mainMenu = SceneManager.GetSceneByName("Title Screen Scene");
-        gameOverScene = SceneManager.GetSceneByName("Game Over Scene");
+        //gameOverScene = SceneManager.GetSceneByName("Game Over Scene");
 
         levelScene = SceneManager.GetSceneByName("Background ScrollView");
 
@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
         if (isGameOver) return;
 
         isGameOver = true;
-        Debug.Log("GAME OVER");
+        //Debug.Log("GAME OVER");
         gameOver?.Invoke();
 
         /*if (youDiedImage == null)
@@ -145,3 +145,4 @@ public class GameManager : MonoBehaviour
     }
 
 }
+
