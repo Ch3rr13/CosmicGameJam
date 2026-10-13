@@ -4,8 +4,6 @@ using UnityEngine.InputSystem;
 public class MantaRayControl : MonoBehaviour
 {
     public float speed = 10f;
-    public float limitX = 8f;
-    public float limitZ = 6f;
 
     void Update()
     {
