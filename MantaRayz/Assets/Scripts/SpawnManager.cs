@@ -41,8 +41,6 @@ public class SpawnManager : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(Vector3.down, Vector3.back);
             Instantiate(enemyPrefab, launch, rotation);
 
-            Debug.Log("Spawn Rate: " + currentSpawnRate);
-
             yield return new WaitForSeconds(currentSpawnRate);
         }
     }

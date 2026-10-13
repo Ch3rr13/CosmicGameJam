@@ -482,6 +482,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4299110958810214306, guid: d289beb64e18ead4e9e2679d9fb2e3fe, type: 3}
     - target: {fileID: 3887100410325746444, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
+      propertyPath: floaterMaxHits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887100410325746444, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
       propertyPath: bulletsPerBurst
       value: 10
       objectReference: {fileID: 0}

@@ -14,6 +14,10 @@ public class FloaterRing : MonoBehaviour
     public int maxFloaters = 3;          // the most floaters the player can have (including the first one)
     public string collectableTag = "Sphere";
 
+    [Header("Floater Health")]
+    public int floaterMaxHits = 3;           // enemy hits a floater survives
+    public float floaterHitCooldown = 0.5f;  // protection time after a hit
+
     [Header("Orbit")]
     public float radius = 3f;
     public float orbitSpeed = 90f;       // degrees per second
@@ -32,8 +36,6 @@ public class FloaterRing : MonoBehaviour
         public float targetSlot;         // where it is sliding to
         public float cooldown;           // time until the next bullet
         public int shotsLeft;            // bullets left in this burst
-
-       
     }
 
     private readonly List<Floater> floaters = new List<Floater>();
@@ -81,31 +83,44 @@ public class FloaterRing : MonoBehaviour
     {
         Floater f = new Floater();
         Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.back);//Makes sure floater looks up
-        f.t = Instantiate(floaterPrefab, transform.position, rotation).transform;
+        GameObject go = Instantiate(floaterPrefab, transform.position, rotation);
+
+        // Give the floater its own health (enemy hits remove it).
+        FloaterHealth health = go.AddComponent<FloaterHealth>();
+        health.Init(floaterMaxHits, floaterHitCooldown);
+
+        f.t = go.transform;
         f.shotsLeft = bulletsPerBurst;
         f.cooldown = floaters.Count * 0.2f;      // each floater starts a little later
         floaters.Add(f);
 
-        // Spread the floaters evenly around the ring.
-        for (int i = 0; i < floaters.Count; i++)
-            floaters[i].targetSlot = i * 360f / floaters.Count;
+        RespreadSlots();
 
         f.slot = f.targetSlot;
 
         Debug.Log("Floaters: " + floaters.Count + " / " + maxFloaters);
     }
 
+    // Spread the floaters evenly around the ring.
+    private void RespreadSlots()
+    {
+        for (int i = 0; i < floaters.Count; i++)
+            floaters[i].targetSlot = i * 360f / floaters.Count;
+    }
+
     private void Update()
     {
         float spin = Time.time * orbitSpeed;
+        bool removedAny = false;
 
         for (int i = floaters.Count - 1; i >= 0; i--)
         {
             Floater f = floaters[i];
 
-            if (f.t == null)                     // floater was destroyed
+            if (f.t == null)                     // floater was destroyed (e.g. ran out of hits)
             {
                 floaters.RemoveAt(i);
+                removedAny = true;
                 continue;
             }
 
@@ -133,5 +148,9 @@ public class FloaterRing : MonoBehaviour
                 }
             }
         }
+
+        // Close the gap: the remaining floaters slide to evenly spaced spots.
+        if (removedAny)
+            RespreadSlots();
     }
 }

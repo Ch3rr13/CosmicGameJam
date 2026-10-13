@@ -642,6 +642,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 626530051774852521, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
   maxFloaters: 3
   collectableTag: Sphere
+  floaterMaxHits: 1
+  floaterHitCooldown: 0.5
   radius: 3
   orbitSpeed: 90
   bulletsPerBurst: 3
