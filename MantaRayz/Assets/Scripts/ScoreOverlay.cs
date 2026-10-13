@@ -1,42 +1,38 @@
 using UnityEngine;
-using UnityEngine.UI; // Required for standard UI Images
+using UnityEngine.UI;
 
 public class ScoreOverlay : MonoBehaviour
 {
-    public static ScoreOverlay Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-        
-    }
-
-    [Header("Assign 0-9 Sprites Here")]
-    [Tooltip("Make sure Index 0 is the '0' image, Index 1 is the '1' image, etc.")]
-    public Sprite[] digitSprites = new Sprite[10]; 
-
-    [Header("Assign UI Image Slots Here (Left to Right)")]
+    public static ScoreOverlay Instance { get; private set; }
+    [Tooltip("Sprites for 0 through 9, in that order.")]
+    public Sprite[] digitSprites = new Sprite[10];
     public Image[] digitSlots;
 
-    void Start()
+    private void OnEnable()
     {
-        ScoreManager.resetScore();
-        //ScoreManager.setScore(1234); //For testing purposes delete later
+        Instance = this;
         UpdateScoreDisplay(ScoreManager.currentScore);
     }
-    // Call this method whenever the player's score changes
-    
+
+    private void OnDisable()
+    {
+        if (Instance == this) Instance = null;
+    }
+
     public void UpdateScoreDisplay(int newScore)
     {
-        // Forces the string to always be exactly the length of your slots (e.g., "0000")
-        string scoreString = newScore.ToString().PadLeft(digitSlots.Length, '0');
+        if (digitSlots == null || digitSlots.Length == 0 || digitSprites == null || digitSprites.Length < 10) return;
+        // Saturate the visible counter instead of silently losing the last digits.
+        string digits = Mathf.Max(0, newScore).ToString();
+        digits = digits.Length > digitSlots.Length
+            ? new string('9', digitSlots.Length)
+            : digits.PadLeft(digitSlots.Length, '0');
 
         for (int i = 0; i < digitSlots.Length; i++)
         {
-            digitSlots[i].enabled = true; 
-        
-            int currentDigit = int.Parse(scoreString[i].ToString());
-            digitSlots[i].sprite = digitSprites[currentDigit];
+            if (digitSlots[i] == null) continue;
+            digitSlots[i].sprite = digitSprites[digits[i] - '0'];
+            digitSlots[i].enabled = true;
         }
     }
 }

@@ -67,17 +67,17 @@ public class PlayerHealth : MonoBehaviour
     {
         foreach (string damageTag in damageTags)
         {
-            if (other.tag == damageTag)
-                return true;
+            for (Transform candidate = other.transform; candidate != null; candidate = candidate.parent)
+                if (candidate.CompareTag(damageTag)) return true;
         }
         return false;
     }
 
-    private void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
-        if (currentHealth <= 0f) return;
-        playerTakeDamage?.Invoke();
+        if (currentHealth <= 0f || amount <= 0f) return;
         currentHealth = Mathf.Max(0f, currentHealth - amount);
+        playerTakeDamage?.Invoke();
 
         Debug.Log("Current health: " + currentHealth);
 
@@ -90,10 +90,7 @@ public class PlayerHealth : MonoBehaviour
 
             // Always use the persistent singleton. A reference assigned in the inspector
             // can point at a duplicate GameManager that destroyed itself.
-            if (GameManager.Instance != null)
-                GameManager.Instance.GameOver();
-            else
-                Debug.LogError("PlayerHealth: GameManager.Instance is null (start from the Title scene, or add a GameManager).");
+            GameManager.GetOrCreate().GameOver();
         }
     }
 }

@@ -1,63 +1,51 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
 using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TitleScreenManager : MonoBehaviour
 {
-    [Header("Flicker Settings")]
-    public GameObject pressToStartIMG; // Assign your image here in the Inspector
-    public float flickerSpeed = 0.5f;  // How fast it blinks in seconds
-    private GameManager gameManager;
+    public GameObject pressToStartIMG;
+    public float flickerSpeed = 0.5f;
+    [SerializeField] private UISpriteSequence transition;
 
     public event Action startGame;
-    private float timer = 0f;
+    private float timer;
+    private float acceptInputAt;
+    private bool starting;
 
-    void Update()
+    private void OnEnable() => acceptInputAt = Time.unscaledTime + 0.25f;
+
+    private void Update()
     {
-        // 1. Handle the flickering
+        if (starting) return;
         if (pressToStartIMG != null)
         {
-            timer += Time.deltaTime;
+            timer += Time.unscaledDeltaTime;
             if (timer >= flickerSpeed)
             {
-                // Toggles the active state to the opposite of what it currently is
                 pressToStartIMG.SetActive(!pressToStartIMG.activeSelf);
                 timer = 0f;
             }
         }
 
-        // 2. Handle the scene transition input
-        bool anyKeyPressed = (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame) || 
-                             (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame);
-
-        if (anyKeyPressed)
-        {
-            startGame?.Invoke();
-
-
-            SceneManager.LoadScene("Game Scene"); 
-        }
+        if (Time.unscaledTime >= acceptInputAt &&
+            ((Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame) ||
+             (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)))
+            BeginGame();
     }
-}
 
-/*
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
-
-public class TitleScreenManager : MonoBehaviour
-{
-    void Update()
+    public void BeginGame()
     {
-        // Checks for keyboard presses or a left mouse click
-        bool anyKeyPressed = (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame) || 
-                             (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame);
+        if (starting) return;
+        starting = true;
+        if (pressToStartIMG != null) pressToStartIMG.SetActive(false);
+        if (transition != null) transition.TransitionTo(LoadGame);
+        else LoadGame();
+    }
 
-        if (anyKeyPressed)
-        {
-            SceneManager.LoadScene("Background ScrollView"); 
-        }
+    private void LoadGame()
+    {
+        startGame?.Invoke();
+        GameManager.GetOrCreate().StartGame();
     }
 }
-*/

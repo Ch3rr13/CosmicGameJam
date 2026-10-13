@@ -1,14 +1,20 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 public class GameOverSceneManager : MonoBehaviour
 {
     private bool leaving = false;
+    private float acceptInputAt;
+
+    private void OnEnable()
+    {
+        leaving = false;
+        acceptInputAt = Time.unscaledTime + 0.25f;
+    }
 
     void Update()
     {
-        if (leaving) return;
+        if (leaving || Time.unscaledTime < acceptInputAt) return;
 
         // Any key or left mouse click
         bool anyKeyPressed = (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame) ||
@@ -17,13 +23,6 @@ public class GameOverSceneManager : MonoBehaviour
         if (!anyKeyPressed) return;
         leaving = true;
 
-        if (GameManager.Instance != null)
-            GameManager.Instance.GameEvent("initGame");   // back to Title; use "startGame" to retry instantly
-        else
-        {
-            // Opened this scene directly in the editor: no GameManager exists.
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(GameManager.TitleScene);
-        }
+        GameManager.GetOrCreate().InitGame();
     }
 }

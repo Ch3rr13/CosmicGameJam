@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public event Action gameInit;
-    public event Action gameStart;
+    public event Action startGame;
     public event Action gameOver;
 
     private bool isGameOver = false;
@@ -28,6 +28,26 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    public static GameManager GetOrCreate()
+    {
+        if (Instance == null) new GameObject("GameManager").AddComponent<GameManager>();
+        return Instance;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != GameScene) return;
+        ResetState();
+        ScoreManager.resetScore();
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (Instance == this) Instance = null;
     }
 
     // Called by GameTrigger / other scripts with one of these keys.
@@ -56,19 +76,23 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("started game");
+        
         ResetState();
-        gameStart?.Invoke();
+        
         SceneManager.LoadScene(GameScene);
+        startGame?.Invoke();
     }
 
     public void GameOver()
     {
         if (isGameOver) return;   // ignore duplicate deaths in the same run
         isGameOver = true;
+        Time.timeScale = 1f;
 
         Debug.Log("GAME OVER");
-        gameOver?.Invoke();
+        
         SceneManager.LoadScene(GameOverScene);
+        gameOver?.Invoke();
     }
 
     private void ResetState()

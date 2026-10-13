@@ -47,7 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f87d3a92d93f9a14bb23be6acaeeb067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  youDiedImage: {fileID: 0}
 --- !u!114 &4201997458942983986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +62,7 @@ MonoBehaviour:
   source: {fileID: 1568215586160476893}
   eventName: gameOver
   eventKeyOverride: 
-  soundOverride: {fileID: 0}
+  soundOverride: {fileID: 11400000, guid: 3fee4eaa0246a463e91dcacc2f71e420, type: 2}
 --- !u!114 &5386751452213514842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,9 +76,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
   source: {fileID: 1568215586160476893}
-  eventName: gameStart
+  eventName: startGame
   eventKeyOverride: 
-  soundOverride: {fileID: 0}
+  soundOverride: {fileID: 11400000, guid: 43a2d18c276e346d18fe22b18970543e, type: 2}
 --- !u!114 &4783552013224353154
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealth(float current, float max)
     {
-        targetValue = Mathf.Clamp01(current / max);
+        targetValue = max > 0f ? Mathf.Clamp01(current / max) : 0f;
     }
 
     private void Update()
