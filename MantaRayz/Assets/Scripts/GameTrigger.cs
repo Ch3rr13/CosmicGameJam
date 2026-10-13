@@ -25,7 +25,7 @@ public class GameTrigger : MonoBehaviour
             boundEvent.EventHandlerType != typeof(Action))
         {
             Debug.LogWarning(
-                $"AudioTrigger: Invalid event {eventName}",
+                $"GameTrigger: Invalid event {eventName}",
                 this
             );
 

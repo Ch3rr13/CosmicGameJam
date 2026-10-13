@@ -198,6 +198,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &160848587 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6592683911292075268, guid: 9b950b3a99d0248dca4430f65490b343, type: 3}
+  m_PrefabInstance: {fileID: 2138262404}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &227393364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3537558212891291538, guid: 9b950b3a99d0248dca4430f65490b343, type: 3}
+  m_PrefabInstance: {fileID: 2138262404}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1320655824
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +370,50 @@ AudioReverbZone:
   m_Density: 100
   m_LFReference: 250
   m_RoomLF: 0
+--- !u!1 &1433873967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1433873969}
+  - component: {fileID: 1433873968}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1433873968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433873967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87d3a92d93f9a14bb23be6acaeeb067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+--- !u!4 &1433873969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433873967}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 193.03375, y: 0, z: 1426.1832}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1487969759
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +557,6 @@ GameObject:
   - component: {fileID: 1550546873}
   - component: {fileID: 1550546876}
   - component: {fileID: 1550546872}
-  - component: {fileID: 1550546874}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -586,10 +639,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1245070750}
-  - {fileID: 430188849}
-  - {fileID: 679766979}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -635,62 +685,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550546867}
   m_CullTransparentMesh: 1
---- !u!114 &1550546874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550546867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1550546872}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEditor.SceneAsset, UnityEditor.CoreModule
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1550546875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,8 +697,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c57a5d8e17c40a69962ff02cbc79f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleScreenManager
-  pressToStartIMG: {fileID: 430188848}
+  pressToStartIMG: {fileID: 227393364}
   flickerSpeed: 0.5
+  transitionAnimator: {fileID: 160848587}
+  transitionDuration: 0.5
 --- !u!114 &1550546876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,7 +714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTrigger
   source: {fileID: 1550546875}
-  eventName: Game Scene
+  eventName: startGame
 --- !u!1001 &2138262404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -729,7 +725,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6006591882429178969, guid: 9b950b3a99d0248dca4430f65490b343, type: 3}
       propertyPath: m_Name
-      value: TitleScreenCanvas
+      value: TitleScreenManager
       objectReference: {fileID: 0}
     - target: {fileID: 7195663504156134436, guid: 9b950b3a99d0248dca4430f65490b343, type: 3}
       propertyPath: m_Pivot.x
@@ -811,10 +807,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8723100947252302873, guid: 5d95e1a317a444d48bd018ca755d266d, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -826,5 +818,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1320655827}
   - {fileID: 1487969761}
-  - {fileID: 1966885180107208284}
   - {fileID: 10039845}
+  - {fileID: 1550546871}
+  - {fileID: 2138262404}
+  - {fileID: 1433873969}
