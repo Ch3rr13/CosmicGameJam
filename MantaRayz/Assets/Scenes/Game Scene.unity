@@ -619,6 +619,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5556547454367485511, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1430988006}
+    - targetCorrespondingSourceObject: {fileID: 5556547454367485511, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1430988012}
   m_SourcePrefab: {fileID: 100100000, guid: a7a890565807ef342b49ae483dacf7d6, type: 3}
 --- !u!1 &585638862
 GameObject:
@@ -1138,6 +1141,20 @@ MonoBehaviour:
   damageTags:
   - Enemy
   spaceTest: 0
+--- !u!114 &1430988012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430987993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dec183eec8305641bd3f20a24c55443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenBounds
+  cam: {fileID: 884795529}
+  padding: {x: 1, y: 0.5}
 --- !u!1 &1485639106
 GameObject:
   m_ObjectHideFlags: 0
