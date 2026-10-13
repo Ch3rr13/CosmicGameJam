@@ -62,7 +62,7 @@ public class AudioTrigger : MonoBehaviour
             ? $"{eventName}"
             : eventKeyOverride;
 
-        Debug.Log($"Triggered: {source.GetType().Name}.{eventName}");
+        //Debug.Log($"Triggered: {source.GetType().Name}.{eventName}");
         Vector3 pos = gameObject.GetComponentInParent<Transform>().position;
         if (GameObject.Find("MantaRay w_ Swim + Sprite") != null)
         {

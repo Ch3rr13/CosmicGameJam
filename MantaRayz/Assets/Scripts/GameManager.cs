@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     public event Action gameStart;
     public event Action gameOver;
 
+    // Score: persists across scenes so the Game Over scene can show it.
+    public int Score { get; private set; }
+    public event Action<int> scoreChanged;
+
     private bool isGameOver = false;
 
     private void Awake()
@@ -57,6 +61,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("started game");
         ResetState();
+        Score = 0;
+        scoreChanged?.Invoke(Score);
         gameStart?.Invoke();
         SceneManager.LoadScene(GameScene);
     }
@@ -69,6 +75,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("GAME OVER");
         gameOver?.Invoke();
         SceneManager.LoadScene(GameOverScene);
+    }
+
+    public void AddScore(int amount)
+    {
+        if (isGameOver) return;   // no points after death
+        Score += amount;
+        scoreChanged?.Invoke(Score);
     }
 
     private void ResetState()

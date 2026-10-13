@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3993195095280188994, guid: 87236af0d56114e4daccda282b6bb7a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.027
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3993195095280188994, guid: 87236af0d56114e4daccda282b6bb7a5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a347edf6c0db1445bf2e6aeabbc8bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  speed: 1
-  health: 5
+  speed: 2
+  health: 1
   EnemyType: 1
   Damage: 10
   difficultyScale: 0.1
