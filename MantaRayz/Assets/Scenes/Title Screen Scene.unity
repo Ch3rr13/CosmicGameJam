@@ -399,6 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f87d3a92d93f9a14bb23be6acaeeb067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  skipTutorialAfterFirstView: 0
 --- !u!4 &1433873969
 Transform:
   m_ObjectHideFlags: 0
@@ -701,6 +702,7 @@ MonoBehaviour:
   flickerSpeed: 0.5
   transitionAnimator: {fileID: 160848587}
   transitionDuration: 0.5
+  tutorialNext: 1
 --- !u!114 &1550546876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,7 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTrigger
   source: {fileID: 1550546875}
-  eventName: startGame
+  eventName: showTutorial
 --- !u!1001 &2138262404
 PrefabInstance:
   m_ObjectHideFlags: 0

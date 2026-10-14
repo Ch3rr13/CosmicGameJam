@@ -13,8 +13,12 @@ public class TitleScreenManager : MonoBehaviour
     public Animator transitionAnimator;
     public float transitionDuration = 1.5f; // Adjust to match your animation's length in seconds
 
-    // GameTrigger (eventName = "startGame") listens to this and tells GameManager to load the game.
-    public event Action startGame;
+    [Tooltip("Tick on the Title screen: pressing a key goes to the Tutorial first. Leave off in the Tutorial scene: it goes straight to the game.")]
+    public bool tutorialNext = false;
+
+    // GameTrigger listens to ONE of these (its Event Name must match) and tells GameManager what to load.
+    public event Action showTutorial;   // Title -> Tutorial
+    public event Action startGame;      // Tutorial -> Game
 
     private float timer = 0f;
     private bool isTransitioning = false; // Prevents overlapping starts
@@ -53,7 +57,10 @@ public class TitleScreenManager : MonoBehaviour
         // 2. Wait for the animation to finish
         yield return new WaitForSeconds(transitionDuration);
 
-        // 3. Hand off to GameManager (via GameTrigger), which loads Game_Scene
-        startGame?.Invoke();
+        // 3. Hand off to GameManager (via GameTrigger), which loads the next scene
+        if (tutorialNext)
+            showTutorial?.Invoke();
+        else
+            startGame?.Invoke();
     }
 }
