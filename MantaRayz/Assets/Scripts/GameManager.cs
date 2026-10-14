@@ -1,6 +1,9 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using NUnit.Framework;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,8 +15,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+    [SerializeField] private InputActionReference pauseAction;
     public event Action gameInit;
-    public event Action gameStart;
+    public event Action startGame;
     public event Action gameOver;
 
     // Score: persists across scenes so the Game Over scene can show it.
@@ -22,9 +26,11 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("On: the tutorial is only shown the first time per play session")]
     [SerializeField] private bool skipTutorialAfterFirstView = false;
+    public GameObject pauseMenu;
 
     private bool isGameOver = false;
     private bool tutorialSeen = false;
+    private bool isPaused = true;
 
     private void Awake()
     {
@@ -37,6 +43,27 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void OnEnable()
+    {
+        pauseAction.action.performed += Pause;        
+    }
+    public void Pause(InputAction.CallbackContext context)
+    {
+        Debug.Log($"{context.action.name}");
+        if (context.performed)
+        {
+            
+                if (SceneManager.GetActiveScene().name.Equals(GameScene))
+            {
+                isPaused = !isPaused;
+            pauseMenu.SetActive(isPaused);
+            float q = isPaused ? 1f : 0f ;
+            Debug.Log(q);
+            Time.timeScale = q;
+            }
+        }
     }
 
     // Called by GameTrigger / other scripts with one of these keys.
@@ -83,8 +110,11 @@ public class GameManager : MonoBehaviour
         ResetState();
         Score = 0;
         scoreChanged?.Invoke(Score);
-        gameStart?.Invoke();
+        startGame?.Invoke();
         SceneManager.LoadScene(GameScene);
+        
+        //pauseMenu = GameObject.FindGameObjectWithTag("Pause");
+        Pause();
     }
 
     public void GameOver()
@@ -108,5 +138,11 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = false;       // without this, only the first death ever works
         Time.timeScale = 1f;      // never leave the game frozen between scenes
+    }
+
+    private void Pause()
+    {
+
+        
     }
 }

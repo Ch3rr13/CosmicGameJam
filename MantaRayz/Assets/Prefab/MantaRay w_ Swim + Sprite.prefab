@@ -624,8 +624,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantaRayControl
   speed: 10
-  limitX: 8
-  limitZ: 6
 --- !u!114 &3887100410325746444
 MonoBehaviour:
   m_ObjectHideFlags: 0

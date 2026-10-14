@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
         Vector3 position,
         AudioCue soundOverride = null)
     {
-        Debug.Log($"Playing cue: {eventKey}");
+        //Debug.Log($"Playing cue: {eventKey}");
         AudioCue cue;
         if (audioSFXBank != null)
         {
