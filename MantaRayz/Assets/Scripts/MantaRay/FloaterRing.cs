@@ -27,7 +27,7 @@ public class FloaterRing : MonoBehaviour
     public float timeBetweenBullets = 0.1f;
     public float timeBetweenBursts = 0.5f;
 
-    //public event Action playerShoot;
+    public event Action playerShoot;
 
     private class Floater
     {
@@ -135,7 +135,7 @@ public class FloaterRing : MonoBehaviour
             {
                 Instantiate(bulletPrefab, f.t.position, Quaternion.identity);
                 f.shotsLeft--;
-                //playerShoot?.Invoke();
+                playerShoot?.Invoke();
 
                 if (f.shotsLeft > 0)
                 {

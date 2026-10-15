@@ -122,11 +122,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2934123341068436679, guid: 29127474536e37d43b74dc5e4fa4321a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2934123341068436679, guid: 29127474536e37d43b74dc5e4fa4321a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.5
+      value: 5.88
       objectReference: {fileID: 0}
     - target: {fileID: -2934123341068436679, guid: 29127474536e37d43b74dc5e4fa4321a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -320,6 +320,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7825931223711838265, guid: 29127474536e37d43b74dc5e4fa4321a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3887100410325746444}
+    - targetCorrespondingSourceObject: {fileID: 7825931223711838265, guid: 29127474536e37d43b74dc5e4fa4321a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9000613296974611314}
+    - targetCorrespondingSourceObject: {fileID: 7825931223711838265, guid: 29127474536e37d43b74dc5e4fa4321a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6390305165833423563}
+    - targetCorrespondingSourceObject: {fileID: 7825931223711838265, guid: 29127474536e37d43b74dc5e4fa4321a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6906318859322731315}
     - targetCorrespondingSourceObject: {fileID: 8941654165412931996, guid: 29127474536e37d43b74dc5e4fa4321a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4665581560127905863}
@@ -631,22 +640,69 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5556547454367485511}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a773c22ce61c0a24a8d4b96c86f694dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloaterRing
-  floaterPrefab: {fileID: 4364977992772668367, guid: 27089efb79401694eb5158aea61fc3a4, type: 3}
+  floaterPrefab: {fileID: 4299110958810214306, guid: d289beb64e18ead4e9e2679d9fb2e3fe, type: 3}
   bulletPrefab: {fileID: 626530051774852521, guid: e113a5be446574d8b8379c47d06e751c, type: 3}
-  maxFloaters: 3
+  maxFloaters: 5
   collectableTag: Sphere
-  floaterMaxHits: 1
+  floaterMaxHits: 3
   floaterHitCooldown: 0.5
-  radius: 3
+  radius: 2
   orbitSpeed: 90
-  bulletsPerBurst: 3
+  bulletsPerBurst: 10
   timeBetweenBullets: 0.1
-  timeBetweenBursts: 0.5
+  timeBetweenBursts: 0.1
+--- !u!114 &9000613296974611314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556547454367485511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a0e85cf3aa5483a92b84c15d595314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
+  source: {fileID: 3887100410325746444}
+  eventName: playerShoot
+  eventKeyOverride: 
+  soundOverride: {fileID: 0}
+--- !u!114 &6390305165833423563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556547454367485511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a03f598422f42b439341553312a4481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 100
+  healthBar: {fileID: 0}
+  damageTags:
+  - Enemy
+  spaceTest: 0
+--- !u!114 &6906318859322731315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556547454367485511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dec183eec8305641bd3f20a24c55443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenBounds
+  cam: {fileID: 0}
+  padding: {x: 1, y: 0.5}
 --- !u!1 &5585667318865678953 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1440063014800135145, guid: 29127474536e37d43b74dc5e4fa4321a, type: 3}

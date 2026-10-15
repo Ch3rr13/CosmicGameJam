@@ -47,7 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f87d3a92d93f9a14bb23be6acaeeb067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  pauseAction: {fileID: 3856176839081272237, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   skipTutorialAfterFirstView: 0
+  pauseMenu: {fileID: 1948260196080446418, guid: ef1ed971151964e8f8a368b594b867f7, type: 3}
 --- !u!114 &4201997458942983986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
   source: {fileID: 1568215586160476893}
-  eventName: gameStart
+  eventName: startGame
   eventKeyOverride: 
   soundOverride: {fileID: 0}
 --- !u!114 &4783552013224353154
