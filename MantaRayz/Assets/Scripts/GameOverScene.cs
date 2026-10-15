@@ -15,7 +15,7 @@ public class GameOverScoreText : MonoBehaviour
         // Updates the text immediately when the Game Over screen turns on
         if (gameOverText != null)
         {
-            gameOverText.text = baseText + ScoreManager.currentScore.ToString() + "\nPress Any Button to Continue";
+            gameOverText.text = baseText + ScoreManager.currentScore.ToString();
         }
     }
 }
